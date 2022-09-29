@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
         <link rel="stylesheet" type="text/css" href="https://st.fontstorage.com/font/import/montserrat.css">
         <style name="common">
             :root {
@@ -14,8 +15,7 @@
                 color: var(--text);
                 margin: 0;
                 padding: 0;
-                font-family: 'Montserrat';
-                
+                font-family: 'Montserrat';        
             }
             .landing {
                 height: 100%;
@@ -68,6 +68,34 @@
                 box-shadow: 3px 3px 12px #00000075;
                 transform: scale(1.01);
             }
+        </style>
+        <style name="common-M">
+            @media screen and (max-device-width: 768px)  {
+                main {
+                    width: 100%;
+                    margin: auto;
+                }
+                .perehod {
+                    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkxOSIgaGVpZ2h0PSI0NSIgdmlld0JveD0iMCAwIDE5MTkgNDUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xOTE5IDE4M1Y0NC43OTE0QzE5MTkgNDQuNzkxNCAxNzY5Ljk5IDAgMTU3OC4yIDBDMTI2NC4wOSAwIDExOTMuMzkgNDMuNjQxOSA5NTkgNDMuNjQxOUM3MjQuNjA2IDQzLjY0MTkgNjUzLjkxMiAwIDMzOS44IDBDMTQ4LjAxMSAwIC0xIDQ0Ljc5MTQgLTEgNDQuNzkxNFYxODNIMTkxOVoiIGZpbGw9IiNGOEY4RjgiLz4KPC9zdmc+Cg==");
+                    background-size: contain;
+                }
+                button.access {
+                    text-decoration: none;
+                    padding: 16px 32px;
+                    background: var(--accent);
+                    border-radius: 5px;
+                    color: var(--text);
+                    display: block;
+                    width: 210px;
+                    text-align: center;
+                    font-size: 18px;
+                    border: none;
+                    box-shadow: 2px 2px 7px #00000075;
+                    cursor: pointer;
+                    transition: all linear 0.3s;
+                    margin:auto;
+                }
+            }    
         </style>
         <style name="screen 1">
             .screen_1 {
@@ -160,7 +188,93 @@
                 margin-top: 70px;
             }
         </style>
-        <style name="screen_2">
+        <style name="screen 1-M">
+            @media screen and (max-device-width: 768px)  {
+                .screen_1 {
+                    height: 100vh;
+                    bbackground: var(--back-light);
+                    min-height: 450px;
+                    max-height: 550px;
+                }
+                .screen_1 main {
+                    height: 550px;
+                    background-position: 93% bottom;
+                    background-size: unset;
+                }
+                .screen_1 main header {
+                    height: 36px;
+                    padding-top: 6px;
+                    padding-left: 6px;
+                }
+                .screen_1 main header .logo {
+                    height: 32px;
+                    opacity: 0.87;
+                }
+                .screen_1 main header small {
+                    width: 155px;
+                    vertical-align: top;
+                    padding: 4px 0 0 0;
+                    font-size: 11px;
+                }
+                .screen_1 main header .contact {
+                    color: var(--text);
+                    font-size: 25px;
+                    padding-right: 6px;
+                    text-decoration: none;
+                    font-weight: normal;
+                    flex-direction: row-reverse;
+                }
+                .screen_1 main header .contact span {
+                    font-size: 11px;
+                    text-decoration: none;
+                    align-self: center;
+                    padding-right: 4px;
+                }
+                .screen_1 main .wooman {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    height: 335px;
+                }
+                .screen_1 svg {
+                    position: absolute;
+                    top: 0;
+                    right: 100px;
+                }
+                .screen_1 .text-container {
+                    padding-top: 0;
+                    width: 350px;
+                    margin: auto;
+                }
+                .screen_1 .text-container p {
+                    margin: 18px 0;
+                    text-align: center;
+                }
+                .screen_1 .text-container .header span {
+                    font-size: 9px;
+                }
+                .screen_1 .text-container .title{
+                    font-size: 20px;
+                    line-height: 133%;
+                }
+                .screen_1 .text-container .title span{
+                    color: var(--accent)
+                }
+                .screen_1 .text-container .text {
+                    font-size: 13px;
+                    line-height: 133%;
+                    width: 235px;
+                    text-align: start;
+                    margin-left: 20px;
+                }
+                .screen_1 .text-container button {
+                    margin: 50px 15px 0;
+                    padding: 16px 24px;
+                    width: 155px;
+                }
+            }
+        </style>
+        <style name="screen 2">
             .screen_2 {
                 background: var(--primary);
                 position: relative;
@@ -332,7 +446,127 @@
                 top: -20px;
             }
         </style>
-        <style name="screen_3">
+        <style name="screen 2-M">
+            @media screen and (max-device-width: 768px)  {
+                .screen_2 .bckg.layer_1 {
+                    background-size: 111%;
+                }
+                .screen_2 .bckg.layer_2 {
+                    background-position: right 250%;
+                    background-size: 120%;
+                }
+                .screen_2 .bckg.layer_3.perehod {
+                    background-size: 250%;
+                }
+                .screen_2 .title {
+                    font-size: 17px;
+                    padding-top: 24px;
+                    line-height: 133%;
+                    width: 350px;
+                    margin: auto;
+                }
+                .screen_2 .problems {
+                    padding-top: 20px;
+                    width: 350px;
+                    margin: auto;
+                }
+                .screen_2 .problem {
+                    width: 100%;
+                    padding: 0 8px;
+                    font-size: 13px;
+                    height: 55px;
+                }
+                .screen_2 .problem aside {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 27px;
+                }
+                .screen_2 .thoughts {
+                    height: 550px;
+                }
+                .screen_2 .thoughts img {
+                    height: 280px;
+                }
+                @keyframes opaciting-1 {
+                    from {
+                        opacity: 0;
+                    }
+                    4%, 29% {
+                        opacity: 1;
+                    }
+                    33%, to {
+                        opacity: 0;
+                    }
+                }
+                @keyframes opaciting-2 {
+                    from, 33% {
+                        opacity: 0;
+                    }
+                    37%, 62% {
+                        opacity: 1;
+                    }
+                    66%, to {
+                        opacity: 0;
+                    }
+                }
+                @keyframes opaciting-3 {
+                    from, 66% {
+                        opacity: 0;
+                    }
+                    70%, 95% {
+                        opacity: 1;
+                    }
+                    99%, to {
+                        opacity: 0;
+                    }
+                }
+                .screen_2 .mind:nth-of-type(-n+3) {
+                    bottom: 285px !important;
+                    left: 80px !important;
+                    right: unset !important;
+                }
+                .screen_2 .mind:nth-of-type(-n+3)::before {
+                    transform: rotate(120deg) !important;
+                    right: 7px !important;
+                    bottom: -37px !important;
+                    left: unset !important;
+                    top: unset !important;
+                }
+                .screen_2 .mind:nth-of-type(n+4) {
+                    bottom: 410px !important;
+                    right: 80px !important;
+                    left: unset !important;
+                    animation-delay: 2s !important;
+                }
+                .screen_2 .mind:nth-of-type(n+4)::before {
+                    transform: rotate(85deg) !important;
+                    left: -57px !important;
+                    bottom: -90px !important;
+                    right: unset !important;
+                    top: unset !important;
+                    border-width: 10px 0 10px 180px;
+                }
+                .screen_2 .mind:nth-of-type(3n+1) {
+                    animation: 
+                        mind-moving-v 1.4s ease infinite alternate-reverse, 
+                        mind-moving-h 0.9s ease infinite alternate-reverse,
+                        opaciting-1 16s ease infinite forwards;
+                }
+                .screen_2 .mind:nth-of-type(3n+2) {
+                    animation: 
+                        mind-moving-v 1.4s ease infinite alternate-reverse, 
+                        mind-moving-h 0.9s ease infinite alternate-reverse,
+                        opaciting-2 16s ease infinite forwards;
+                }
+                .screen_2 .mind:nth-of-type(3n+3) {
+                    animation: 
+                        mind-moving-v 1.4s ease infinite alternate-reverse, 
+                        mind-moving-h 0.9s ease infinite alternate-reverse,
+                        opaciting-3 16s ease infinite forwards;
+                }
+            }
+        </style>
+        <style name="screen 3">
             .screen_3 {
                 background: var(--back-light);
                 position: relative;
@@ -410,8 +644,86 @@
                 filter: brightness(97%);
                 margin: 0 14px;
             }
+            .screen_3 .demo {
+                display: none;
+            }
         </style>
-        <style nane="screen_4">
+        <style name="screen 3-M">
+             @media screen and (max-device-width: 768px)  {
+                .screen_3 main {
+                    width: 100%;
+                    padding: 0 8px;
+                    box-sizing: border-box;
+                }
+                .screen_3 .title {
+                    font-size: 17px;
+                    width: unset;
+                    padding: 24px 0 12px;
+                }
+                .screen_3 .phone-holder {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .screen_3 .phone-holder .column {
+                    width: unset;
+                }
+                .screen_3 .phone-holder .column:nth-of-type(2) {
+                    order: 3;
+                    margin-top: 24px;
+                    display: flex;
+                    justify-content: center;
+                }
+                .screen_3 .phone-holder .column .text aside {
+                    border: 3px solid var(--accent);
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                    opacity: 0.87;
+                }
+                .screen_3 .phone-holder .column .text {
+                    font-size: 13px;
+                    padding: 6px;
+                }
+                .screen_3 .pluses {
+                    scroll-snap-type: x mandatory;
+                    overflow-x: scroll;
+                    padding: 0 75px;
+                    margin-top: 8px;
+                }
+                .screen_3 .pluses .plus {
+                    width: 180px;
+                    flex-shrink: 0;
+                    scroll-snap-align: center;
+                    margin: 0 8px;
+                }
+                .screen_3 .pluses .plus::before {
+                    margin-bottom: 4px;
+                }
+                .screen_3 .qr-holder {
+                    display: none;
+                }
+                .screen_3 .demo {
+                    display: block;
+                    text-align: center;
+                }
+                .screen_3 .demo a {
+                    text-decoration: none;
+                    padding: 16px 16px;
+                    background: var(--accent);
+                    border-radius: 5px;
+                    color: var(--text);
+                    display: block;
+                    width: 210px;
+                    text-align: center;
+                    font-size: 14px;
+                    border: none;
+                    box-shadow: 2px 2px 7px #00000075;
+                    margin: auto;
+                    margin-top: 8px;
+                }
+             }
+        </style>
+        <style nane="screen 4">
             .screen_4 {
                 background: var(--primary);
                 position: relative;
@@ -484,7 +796,50 @@
                 height: 530px;
             }
         </style>
-        <style name="screen_5">
+        <style nane="screen 4-M">
+            @media screen and (max-device-width: 768px)  {
+                .screen_4 .back.perehod {
+                    background-size: 125%;
+                }
+                .screen_4 main {
+                    width: 100%;
+                    padding: 0 8px;
+                    box-sizing: border-box;
+                }
+                .screen_4 .title {
+                    font-size: 17px;
+                    padding-top: 40px;
+                    padding-bottom: 10px;
+                }
+                .screen_4 .subtitle {
+                    font-size: 13px;
+                }
+                .screen_4 .content {
+                    margin: unset;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: unset;
+                }
+                .screen_4 .plus {
+                    width: unset;
+                    margin: 0;
+                    font-size: 13px;
+                    padding-right: 0;
+                }
+                .screen_4 .plus::before {
+                    margin: 8px;
+                }
+                .screen_4 .content img {
+                    position: relative;
+                    bottom: unset;
+                    right: unset;
+                    height: 350px;
+                    margin: auto;
+                }
+            }
+        </style>
+        <style name="screen 5">
             .screen_5 {
                 background: var(--back-light);
                 position: relative;
@@ -569,6 +924,56 @@
                 line-height: 150%;
             }
         </style>
+        <style name="screen 5-M">
+            @media screen and (max-device-width: 768px)  {
+                .screen_5 {
+                    padding-bottom: 0;
+                }
+                .screen_5 .title {
+                    font-size: 17px;
+                    padding: 36px 0 24px;
+                }
+                .screen_5 .plate {
+                    width: 350px;
+                    flex-direction: column;
+                    height: unset;
+                    background: none;
+                    border-radius: unset;
+                    box-shadow: none;
+                    color: unset;
+                    font-size: 13px;
+                }
+                .screen_5 .plate .col{
+                    width: unset;
+                    box-sizing: unset;
+                    padding: 0 12px;
+                }
+                .screen_5 .plate .col:first-of-type{
+                    border-right: none;
+                }
+                .screen_5 .plate .col:last-of-type{
+                    text-align: center;
+                }
+                .screen_5 .plus {
+                    align-items: center;
+                    display: flex;
+                    box-sizing: border-box;
+                    line-height: 150%;
+                }
+                .screen_5 .plus::before {
+                    margin-right: 16px;
+                    margin-bottom: 8px;
+                }
+                .screen_5 img {
+                    padding-top: 24px;
+                }
+                .screen_5 .post-content {
+                    width: unset;
+                    font-size: 11px;
+                    padding: 24 12px;
+                }
+            }
+        </style>
         <style name="footer">
             .footer {
                 height: 80px;
@@ -623,6 +1028,37 @@
                 line-height: 75%;
                 border-radius: 5px;
                 cursor: pointer;
+            }
+        </style>
+        <style name="footer M">
+            @media screen and (max-device-width: 768px)  {
+                .footer {
+                    height: 56px;
+                }
+                .footer main>div {
+                    width: 33.3%;
+                }
+                .footer main .logo {
+                    height: 36px;
+                    padding-left: 12px;
+                }
+                .footer main small {
+                    display: none;
+                }
+                .footer main .contact {
+                    font-size: 21px;
+                    flex-direction: column-reverse;
+                    width: 70px;
+                    text-align: center;
+                    margin-right: 6px;
+                }
+                .footer main .contact span {
+                    font-size: 11px;
+                    padding-left: 0;
+                }
+                .footer main button {
+                    font-size: 11px;
+                }
             }
         </style>
         <style name="modal">
@@ -691,7 +1127,7 @@
                         <p class="title">Сберегите нервные клетки, время и настроение от разборок в <span>школьных чатах</span></p>
                         <p class="text">Больше не будет +100500 уведомлений на утро, бесконечного нытья, споров и слов: «А мы не знали!». Теперь решить любой вопрос или собрать деньги без долговой расписки можно
                             в одном месте.</p>
-                        <button class="access" onclick="document.getElementById('buy').scrollIntoView({behavior: 'smooth', block: 'end'})">Получить доступ</button>
+                        <button class="access" onclick="document.getElementById('buy').scrollIntoView({behavior: 'smooth', block: 'end'})">Узнать цену</button>
                     </div>
                 </main>         
             </section> 
@@ -783,7 +1219,12 @@
                     <div class="qr-holder">
                         <div style="text-align: end">Сканируйте и попробуйте демо-пространство на своем устройстве</div>
                         <img src="data:image/gif;base64,R0lGODdhjACMAIAAAAAAAP///ywAAAAAjACMAAAC/4yPqcvtD6OctNqLs968+w+G4kiWB4Cm6sq2UAtQKgPPZ0rXOpzvPv7gTWwKH4KY+Clji+Xv5RoCi7vjNOmsNrM6KEt2tXZvqB43Si1fkGYxM71yt6VqC5v8rtzh8u0XPyexFzE46JUXGFCIphgGSIcImQhW14C0+GeAGelgGOSoeWX0GFrZx0dKuHTaOFbK2Zo3+spam+oJNxvrJkTrJ6vlK4xlegtquWrsuvvLy3h5vGnbmTysK43Xy/yqzaGNbR28TQy8DL3s/Rwtym6+XnndXgPy/V5+X18c7g4vnp45jtW5eakEihuYL8uhaeScAQQXK6HDONmqIeunr2HFh//2Jg70KM/JwoLNNlIcZpAfPnVcRqIsyY0lLFwXV6qkmdLmPQwQKelMiFOZToYuNdoJeZBRUYTyeHZcg/TmsURMMcIqCrKl0Jxctwo9c5Ic2I9e9+0sO26sUpNgu5p1m7Yp2zNm1FqFS/YtWrthTcTkmJFhvMB+SQy+SvJv2KCFPRzGOvdu48mPP2WsPDmnSJgR/aHN+tMzNaubUSnu9jlyaHSWVxM03Zm13lwyS6sibVGz6LiXk2o9qpJqbtWoXyoGTROz0divxQ43zhz5VNWCozaXDrA64CetJXK2jb1v4ujEpwPnftquT6e4CWuwzbd4TfZDR8CPn701/YmGLeL/zz8aYgHyp99XT0GXnEyHbCKfcO3NJBdsdUVYE4NrDWhgb5JJ+EteFdrT4HfWOQihe+RBRyBtAN4mXnrbWbgiaOuN5xOMzcmny4QximjigiD61iJzCco2H42Q2AjUjzu6KOByjC2XIosyjteTSTqiB6WVklBH5YHOaagQZ1EuBeQkXa7YlphaCmKdh9qVGGSajl3I22J0rfmhVD1CheaI5b1onpC1BUofREkqMWaHQD5Zo5eHYhkik1U1+SaJbp4J56QeMoqppRRWquiDmxKqJoJ+mgrmlVPOpoeXum2YJap2BmckbIcNeeOpdUYZaUAZzhrkqnWO+mCiHJr1qI/b//FKYbIF2rpooMp5h6yuZsqKK7Op/nkdnuBhmq23jqoXqmtVHvfsib5W+9uX5rqKp6ewvhqmiu+amOOvT1KrbniTNtqnqKSiy26m/tF5paG7qfprwtHuyaS8wZZLr8N6NvlvdwOruy/C3PaacYAdL3uktORiSHCelIoLcb/lfgvtki6L/KnG+J6sMqjHdsCvsHAxLOu1PCv48rg3k7wzp2wi7a7CRwMrtNIsXhoxjxib/LSzVds78llJY331xT5zubTXsa57trCPIrkx1WiHSzOgAoPZ68+dWo3rubt+TKfbOs/sbtTN4mz318XaDCeJ/vZds+H1xZ241YsHbLbQRP/hDXZ4b7K9LcpSxos5rfZaHLnnZMqsKdGjF915kWUb6+TBdCsZZ+NNwxt0rYIiqnvht7f+d953oig54no7HfZYl8ecPI647w35fS33Ny/oktJ+euV+ue0876t77rd9tnePJex4bfyP9ilrTnG63P8nMfvM8xuyynLGLne3BRP7uP3D4w+sfO1vcIeL3v8qxi2J8c98vQudwfInQMBNrnStKuDv7lU71B2wgfOjXeqIBLINEg98jLtYBEPYLnrxr36WI9vuyrelrQ3LWqW64ASl9kGzac11/psbDF/nwvqhsHmDSmEMX6jCh/Uve0A7Ww6TKDbr8dBGgvMhFHOVvxmVYet5T9SXEhnIvCYGr0ws06HqZji76bmPjClbIQGXKMX9BFFXboQVC+PIJ9cgkFX0o+H6NoDD540NiH/8XgVX5jhlTYyEGpRZC02nuwhmT3hqHCEPl4fEPIJRgsb7X93KqEWOYa+T7fpkG9tGx1EasJQeM2TXtPVAIqplk7AMZc/wmJlc6nKXvOylL38JzGAKc5gcKAAAOw==" alt="data:image/gif;base64,R0lGODdhjACMAIAAAAAAAP///ywAAAAAjACMAAAC/4yPqcvtD6OctNqLs968+w+G4kiWB4Cm6sq2UAtQKgPPZ0rXOpzvPv7gTWwKH4KY+Clji+Xv5RoCi7vjNOmsNrM6KEt2tXZvqB43Si1fkGYxM71yt6VqC5v8rtzh8u0XPyexFzE46JUXGFCIphgGSIcImQhW14C0+GeAGelgGOSoeWX0GFrZx0dKuHTaOFbK2Zo3+spam+oJNxvrJkTrJ6vlK4xlegtquWrsuvvLy3h5vGnbmTysK43Xy/yqzaGNbR28TQy8DL3s/Rwtym6+XnndXgPy/V5+X18c7g4vnp45jtW5eakEihuYL8uhaeScAQQXK6HDONmqIeunr2HFh//2Jg70KM/JwoLNNlIcZpAfPnVcRqIsyY0lLFwXV6qkmdLmPQwQKelMiFOZToYuNdoJeZBRUYTyeHZcg/TmsURMMcIqCrKl0Jxctwo9c5Ic2I9e9+0sO26sUpNgu5p1m7Yp2zNm1FqFS/YtWrthTcTkmJFhvMB+SQy+SvJv2KCFPRzGOvdu48mPP2WsPDmnSJgR/aHN+tMzNaubUSnu9jlyaHSWVxM03Zm13lwyS6sibVGz6LiXk2o9qpJqbtWoXyoGTROz0divxQ43zhz5VNWCozaXDrA64CetJXK2jb1v4ujEpwPnftquT6e4CWuwzbd4TfZDR8CPn701/YmGLeL/zz8aYgHyp99XT0GXnEyHbCKfcO3NJBdsdUVYE4NrDWhgb5JJ+EteFdrT4HfWOQihe+RBRyBtAN4mXnrbWbgiaOuN5xOMzcmny4QximjigiD61iJzCco2H42Q2AjUjzu6KOByjC2XIosyjteTSTqiB6WVklBH5YHOaagQZ1EuBeQkXa7YlphaCmKdh9qVGGSajl3I22J0rfmhVD1CheaI5b1onpC1BUofREkqMWaHQD5Zo5eHYhkik1U1+SaJbp4J56QeMoqppRRWquiDmxKqJoJ+mgrmlVPOpoeXum2YJap2BmckbIcNeeOpdUYZaUAZzhrkqnWO+mCiHJr1qI/b//FKYbIF2rpooMp5h6yuZsqKK7Op/nkdnuBhmq23jqoXqmtVHvfsib5W+9uX5rqKp6ewvhqmiu+amOOvT1KrbniTNtqnqKSiy26m/tF5paG7qfprwtHuyaS8wZZLr8N6NvlvdwOruy/C3PaacYAdL3uktORiSHCelIoLcb/lfgvtki6L/KnG+J6sMqjHdsCvsHAxLOu1PCv48rg3k7wzp2wi7a7CRwMrtNIsXhoxjxib/LSzVds78llJY331xT5zubTXsa57trCPIrkx1WiHSzOgAoPZ68+dWo3rubt+TKfbOs/sbtTN4mz318XaDCeJ/vZds+H1xZ241YsHbLbQRP/hDXZ4b7K9LcpSxos5rfZaHLnnZMqsKdGjF915kWUb6+TBdCsZZ+NNwxt0rYIiqnvht7f+d953oig54no7HfZYl8ecPI647w35fS33Ny/oktJ+euV+ue0876t77rd9tnePJex4bfyP9ilrTnG63P8nMfvM8xuyynLGLne3BRP7uP3D4w+sfO1vcIeL3v8qxi2J8c98vQudwfInQMBNrnStKuDv7lU71B2wgfOjXeqIBLINEg98jLtYBEPYLnrxr36WI9vuyrelrQ3LWqW64ASl9kGzac11/psbDF/nwvqhsHmDSmEMX6jCh/Uve0A7Ww6TKDbr8dBGgvMhFHOVvxmVYet5T9SXEhnIvCYGr0ws06HqZji76bmPjClbIQGXKMX9BFFXboQVC+PIJ9cgkFX0o+H6NoDD540NiH/8XgVX5jhlTYyEGpRZC02nuwhmT3hqHCEPl4fEPIJRgsb7X93KqEWOYa+T7fpkG9tGx1EasJQeM2TXtPVAIqplk7AMZc/wmJlc6nKXvOylL38JzGAKc5gcKAAAOw=="/>
-                        <div style="text-align: start">Или откройте на своем телефоне страницу notachat.github.io/concept</div></div>
+                        <div style="text-align: start">Или откройте на своем телефоне страницу notachat.github.io/concept</div>
+                    </div>
+                    <div class="demo">
+                        <span>Попробуй демо на своем устройстве</span>
+                        <a href="https://notachat.github.io/concept" rel="noreferrer" target="_blank">Попробовать</a>
+                    </div>
                     <div class="title">
                         <strong>НеЧат</strong> сделает вашу жизнь проще
                     </div>
