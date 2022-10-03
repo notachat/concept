@@ -69,15 +69,11 @@
                 transform: scale(1.01);
             }
         </style>
-        <style name="common-M">
-            @media screen and (max-device-width: 768px)  {
+        <style name="common M">
+            @media screen and (max-device-width: 769px)  {
                 main {
                     width: 100%;
                     margin: auto;
-                }
-                .perehod {
-                    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkxOSIgaGVpZ2h0PSI0NSIgdmlld0JveD0iMCAwIDE5MTkgNDUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xOTE5IDE4M1Y0NC43OTE0QzE5MTkgNDQuNzkxNCAxNzY5Ljk5IDAgMTU3OC4yIDBDMTI2NC4wOSAwIDExOTMuMzkgNDMuNjQxOSA5NTkgNDMuNjQxOUM3MjQuNjA2IDQzLjY0MTkgNjUzLjkxMiAwIDMzOS44IDBDMTQ4LjAxMSAwIC0xIDQ0Ljc5MTQgLTEgNDQuNzkxNFYxODNIMTkxOVoiIGZpbGw9IiNGOEY4RjgiLz4KPC9zdmc+Cg==");
-                    background-size: contain;
                 }
                 button.access {
                     text-decoration: none;
@@ -94,6 +90,14 @@
                     cursor: pointer;
                     transition: all linear 0.3s;
                     margin:auto;
+                }
+            }    
+        </style>
+        <style name="common T">
+            @media screen and (min-device-width: 769px) and (max-device-width: 1040px)  {
+                main {
+                    width: 768px;
+                    margin: auto;
                 }
             }    
         </style>
@@ -189,23 +193,23 @@
             }
         </style>
         <style name="screen 1-M">
-            @media screen and (max-device-width: 768px)  {
+            @media screen and (max-device-width: 769px)  {
                 .screen_1 {
-                    height: unset;
+                    height: 100vh;
+                    min-height: 600px;
                     background: var(--back-light);
                 }
                 .screen_1 main {
-                    height: 100vh;
                     background-position: 93% bottom;
                     background-size: unset;
-                    min-height: 600px;
                     background: none;
+                    display: flex;
+                    flex-direction: column;
                 }
                 .screen_1 main header {
                     height: 36px;
                     padding-top: 6px;
                     padding-left: 6px;
-                    margin-bottom: 35px;
                 }
                 .screen_1 main header .logo {
                     height: 32px;
@@ -235,7 +239,7 @@
                 }
                 .screen_1 main .wooman {
                     position: absolute;
-                    top: 100px;
+                    top: calc(50% - 190px);
                     left: calc(50% - 70px);
                     height: 190px;
                 }
@@ -284,6 +288,34 @@
                     padding: 16px 24px;
                     margin: auto;
                     margin-top: 30px;
+                }
+            }
+        </style>
+        <style name="screen 1-T">
+            @media screen and (min-device-width: 769px) and (max-device-width: 1040px)  {
+                .screen_1 {
+                    background-image: linear-gradient(to right, var(--back-light) calc(50% - 380px), var(--primary) calc(50% - 380px));
+                }
+                .screen_1 main {
+                    background-position: right;
+                }
+                .screen_1 main header {
+                    padding-top: 16px;
+                    padding-left: 6px;
+                }
+                .screen_1 main .wooman {
+                    right: -155px;
+                }
+                .screen_1 .text-container {
+                    padding-top: 65px;
+                    padding-left: 8px;
+                    width: 530px;
+                }
+                .screen_1 .text-container .header {
+                    text-align: center;
+                }
+                .screen_1 .text-container .text {
+                    width: 85%;
                 }
             }
         </style>
@@ -466,7 +498,7 @@
             }
         </style>
         <style name="screen 2-M">
-            @media screen and (max-device-width: 1768px)  {
+            @media screen and (max-device-width: 769px)  {
                 .screen_2 .bckg.layer_1 {
                     background-size: 111%;
                 }
@@ -543,7 +575,7 @@
                 }
                 .screen_2 .mind:nth-of-type(-n+3) {
                     bottom: 285px !important;
-                    left: 80px !important;
+                    left: calc(50% - 105px) !important;
                     right: unset !important;
                 }
                 .screen_2 .mind:nth-of-type(-n+3)::before {
@@ -555,7 +587,7 @@
                 }
                 .screen_2 .mind:nth-of-type(n+4) {
                     bottom: 410px !important;
-                    right: 80px !important;
+                    right: calc(50% - 105px) !important;
                     left: unset !important;
                     animation-delay: 2s !important;
                 }
@@ -584,6 +616,63 @@
                         mind-moving-v 1.4s ease infinite alternate-reverse, 
                         mind-moving-h 0.9s ease infinite alternate-reverse,
                         opaciting-3 16s ease infinite forwards;
+                }
+            }
+        </style>
+        <style name="screen 2-T">
+            @media screen and (min-device-width: 769px) and (max-device-width: 1040px)  {
+                .screen_2 main {
+                    width: 100%;
+                }
+                .screen_2 .title {
+                    padding-top: 48px;
+                }
+                .screen_2 .problems {
+                    padding-top: 36px;
+                }
+                .screen_2 .problem aside {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 32px;
+                }
+                .screen_2 .thoughts {
+                    height: 550px;
+                    width: 768px;
+                    margin: auto;
+                }
+                .screen_2 .thoughts img {
+                    height: 400px;
+                }
+                .screen_2 .mind {
+                    width: 200px;
+                    height: 128px;
+                    line-height: 133%;
+                }
+                .screen_2 .mind:nth-of-type(1) {
+                    bottom: 385px;
+                }
+                .screen_2 .mind:nth-of-type(2) {
+                    bottom: 385px;
+                }
+                .screen_2 .mind:nth-of-type(3) {
+                    bottom: 210px;
+                    left: 0px;
+                }
+                .screen_2 .mind:nth-of-type(4) {
+                    bottom: 210px;
+                    right: 0;
+                }
+                .screen_2 .mind:nth-of-type(5) {
+                    bottom: 40px;
+                    left: 35px;
+                    width: 235px;
+                    height: 100px;
+                }
+                .screen_2 .mind:nth-of-type(6) {
+                    bottom: 40px;
+                    right: 15px;
+                    width: 260px;
+                    height: 100px;
                 }
             }
         </style>
@@ -672,7 +761,7 @@
             }
         </style>
         <style name="screen 3-M">
-             @media screen and (max-device-width: 768px)  {
+             @media screen and (max-device-width: 769px)  {
                 .screen_3 main {
                     width: 100%;
                     padding: 0 8px;
@@ -745,6 +834,51 @@
                     margin-top: 8px;
                 }
              }
+        </style>
+        <style name="screen 3-T">
+            @media screen and (min-device-width: 769px) and (max-device-width: 1040px)  {
+                .screen_3 .phone-holder {
+                    display: grid;
+                    grid-template-columns: 320px 440px;
+                    grid-template-rows: 180px 220px;
+                }
+                .screen_3 .phone-holder .column {
+                    width: 440px;
+                }
+                .screen_3 .phone-holder .column:nth-of-type(2) {
+                    width: 320px;
+                    order: -1;
+                }
+                .screen_3 .phone-holder .column:nth-of-type(3) {
+                    grid-column: 2;
+                }
+                .screen_3 .phone-holder .column .text aside {
+                    border: 3px solid var(--accent);
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                    opacity: 0.87;
+                }
+                .screen_3 .phone-holder .column .text {
+                    font-size: 16px;
+                    padding: 6px;
+                }
+                .screen_3 .qr-holder {
+                    width: unset;
+                    margin-top: 0;
+                }
+                .screen_3 .qr-holder img {
+                    order: -1;
+                    margin-left: 120px;
+                    margin-right: 40px;
+                }
+                .screen_3 .qr-holder div {
+                    flex: unset;
+                    width: 200px;
+                    margin-right: 65px;
+                    text-align: start !important;
+                }
+            }
         </style>
         <style nane="screen 4">
             .screen_4 {
@@ -821,7 +955,7 @@
             }
         </style>
         <style nane="screen 4-M">
-            @media screen and (max-device-width: 768px)  {
+            @media screen and (max-device-width: 769px)  {
                 .screen_4 {
                     background: none;
                 }
@@ -848,8 +982,11 @@
                     flex-direction: column;
                     width: unset;
                 }
+                .screen_4 .container {
+                    justify-content: center;
+                }
                 .screen_4 .plus {
-                    width: unset;
+                    width: 425px;
                     margin: 0;
                     font-size: 13px;
                     padding-right: 0;
@@ -863,6 +1000,41 @@
                     right: unset;
                     height: 350px;
                     margin: auto;
+                }
+            }
+        </style>
+        <style nane="screen 4-T">
+            @media screen and (min-device-width: 769px) and (max-device-width: 1040px)  {
+                .screen_4 {
+                    background-size: cover;
+                }
+                .screen_4 main {
+                    width: 100%;
+                }
+                .screen_4 .title {
+                    padding-top: 56px;
+                }
+                .screen_4 .content {
+                    margin-top: 0;
+                    width: 768px;
+                    margin: auto;
+                    margin-bottom: 90px;
+                }
+                .screen_4 .container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 75%;
+                    margin-top: 24px;
+                }
+                .screen_4 .plus {
+                    width: 100%;
+                    margin: 0;
+                    line-height: 150%;
+                    font-size: 18px;
+                }
+                .screen_4 .content img {
+                    right: -90px;
+                    height: 400px;
                 }
             }
         </style>
@@ -953,7 +1125,7 @@
             }
         </style>
         <style name="screen 5-M">
-            @media screen and (max-device-width: 768px)  {
+            @media screen and (max-device-width: 769px)  {
                 .screen_5 {
                     padding-bottom: 0;
                 }
@@ -1059,7 +1231,7 @@
             }
         </style>
         <style name="footer M">
-            @media screen and (max-device-width: 768px)  {
+            @media screen and (max-device-width: 769px)  {
                 .footer {
                     height: 56px;
                 }
@@ -1089,6 +1261,19 @@
                 }
             }
         </style>
+        <style name="footer T">
+            @media screen and (min-device-width: 769px) and (max-device-width: 1040px)  {
+                .footer {
+                    height: 64px;
+                }
+                .footer main small {
+                    width: 190px;
+                }
+                .footer main {
+                    width: 100%;
+                }
+            }
+        </style>
         <style name="modal">
             .modal .title {
                 font-weight: 500;
@@ -1100,7 +1285,7 @@
             .modal .form {
                 box-shadow: 2px 2px 11px #00000075;
                 width: 800px;
-                margin-top: 50px;
+                margin: 50px 10px 0;
                 text-align: center;
                 border-radius: 10px;
                 background: var(--back-light);
@@ -1130,7 +1315,7 @@
             }
         </style>
         <style name="modal M">
-            @media screen and (max-device-width: 768px)  {
+            @media screen and (max-device-width: 769px)  {
                 .modal .title {
                     font-size: 17px;
                 }
@@ -1263,7 +1448,7 @@
                     <div class="qr-holder">
                         <div style="text-align: end">Сканируйте и попробуйте демо-пространство на своем устройстве</div>
                         <img src="data:image/gif;base64,R0lGODdhjACMAIAAAAAAAP///ywAAAAAjACMAAAC/4yPqcvtD6OctNqLs968+w+G4kiWB4Cm6sq2UAtQKgPPZ0rXOpzvPv7gTWwKH4KY+Clji+Xv5RoCi7vjNOmsNrM6KEt2tXZvqB43Si1fkGYxM71yt6VqC5v8rtzh8u0XPyexFzE46JUXGFCIphgGSIcImQhW14C0+GeAGelgGOSoeWX0GFrZx0dKuHTaOFbK2Zo3+spam+oJNxvrJkTrJ6vlK4xlegtquWrsuvvLy3h5vGnbmTysK43Xy/yqzaGNbR28TQy8DL3s/Rwtym6+XnndXgPy/V5+X18c7g4vnp45jtW5eakEihuYL8uhaeScAQQXK6HDONmqIeunr2HFh//2Jg70KM/JwoLNNlIcZpAfPnVcRqIsyY0lLFwXV6qkmdLmPQwQKelMiFOZToYuNdoJeZBRUYTyeHZcg/TmsURMMcIqCrKl0Jxctwo9c5Ic2I9e9+0sO26sUpNgu5p1m7Yp2zNm1FqFS/YtWrthTcTkmJFhvMB+SQy+SvJv2KCFPRzGOvdu48mPP2WsPDmnSJgR/aHN+tMzNaubUSnu9jlyaHSWVxM03Zm13lwyS6sibVGz6LiXk2o9qpJqbtWoXyoGTROz0divxQ43zhz5VNWCozaXDrA64CetJXK2jb1v4ujEpwPnftquT6e4CWuwzbd4TfZDR8CPn701/YmGLeL/zz8aYgHyp99XT0GXnEyHbCKfcO3NJBdsdUVYE4NrDWhgb5JJ+EteFdrT4HfWOQihe+RBRyBtAN4mXnrbWbgiaOuN5xOMzcmny4QximjigiD61iJzCco2H42Q2AjUjzu6KOByjC2XIosyjteTSTqiB6WVklBH5YHOaagQZ1EuBeQkXa7YlphaCmKdh9qVGGSajl3I22J0rfmhVD1CheaI5b1onpC1BUofREkqMWaHQD5Zo5eHYhkik1U1+SaJbp4J56QeMoqppRRWquiDmxKqJoJ+mgrmlVPOpoeXum2YJap2BmckbIcNeeOpdUYZaUAZzhrkqnWO+mCiHJr1qI/b//FKYbIF2rpooMp5h6yuZsqKK7Op/nkdnuBhmq23jqoXqmtVHvfsib5W+9uX5rqKp6ewvhqmiu+amOOvT1KrbniTNtqnqKSiy26m/tF5paG7qfprwtHuyaS8wZZLr8N6NvlvdwOruy/C3PaacYAdL3uktORiSHCelIoLcb/lfgvtki6L/KnG+J6sMqjHdsCvsHAxLOu1PCv48rg3k7wzp2wi7a7CRwMrtNIsXhoxjxib/LSzVds78llJY331xT5zubTXsa57trCPIrkx1WiHSzOgAoPZ68+dWo3rubt+TKfbOs/sbtTN4mz318XaDCeJ/vZds+H1xZ241YsHbLbQRP/hDXZ4b7K9LcpSxos5rfZaHLnnZMqsKdGjF915kWUb6+TBdCsZZ+NNwxt0rYIiqnvht7f+d953oig54no7HfZYl8ecPI647w35fS33Ny/oktJ+euV+ue0876t77rd9tnePJex4bfyP9ilrTnG63P8nMfvM8xuyynLGLne3BRP7uP3D4w+sfO1vcIeL3v8qxi2J8c98vQudwfInQMBNrnStKuDv7lU71B2wgfOjXeqIBLINEg98jLtYBEPYLnrxr36WI9vuyrelrQ3LWqW64ASl9kGzac11/psbDF/nwvqhsHmDSmEMX6jCh/Uve0A7Ww6TKDbr8dBGgvMhFHOVvxmVYet5T9SXEhnIvCYGr0ws06HqZji76bmPjClbIQGXKMX9BFFXboQVC+PIJ9cgkFX0o+H6NoDD540NiH/8XgVX5jhlTYyEGpRZC02nuwhmT3hqHCEPl4fEPIJRgsb7X93KqEWOYa+T7fpkG9tGx1EasJQeM2TXtPVAIqplk7AMZc/wmJlc6nKXvOylL38JzGAKc5gcKAAAOw==" alt="data:image/gif;base64,R0lGODdhjACMAIAAAAAAAP///ywAAAAAjACMAAAC/4yPqcvtD6OctNqLs968+w+G4kiWB4Cm6sq2UAtQKgPPZ0rXOpzvPv7gTWwKH4KY+Clji+Xv5RoCi7vjNOmsNrM6KEt2tXZvqB43Si1fkGYxM71yt6VqC5v8rtzh8u0XPyexFzE46JUXGFCIphgGSIcImQhW14C0+GeAGelgGOSoeWX0GFrZx0dKuHTaOFbK2Zo3+spam+oJNxvrJkTrJ6vlK4xlegtquWrsuvvLy3h5vGnbmTysK43Xy/yqzaGNbR28TQy8DL3s/Rwtym6+XnndXgPy/V5+X18c7g4vnp45jtW5eakEihuYL8uhaeScAQQXK6HDONmqIeunr2HFh//2Jg70KM/JwoLNNlIcZpAfPnVcRqIsyY0lLFwXV6qkmdLmPQwQKelMiFOZToYuNdoJeZBRUYTyeHZcg/TmsURMMcIqCrKl0Jxctwo9c5Ic2I9e9+0sO26sUpNgu5p1m7Yp2zNm1FqFS/YtWrthTcTkmJFhvMB+SQy+SvJv2KCFPRzGOvdu48mPP2WsPDmnSJgR/aHN+tMzNaubUSnu9jlyaHSWVxM03Zm13lwyS6sibVGz6LiXk2o9qpJqbtWoXyoGTROz0divxQ43zhz5VNWCozaXDrA64CetJXK2jb1v4ujEpwPnftquT6e4CWuwzbd4TfZDR8CPn701/YmGLeL/zz8aYgHyp99XT0GXnEyHbCKfcO3NJBdsdUVYE4NrDWhgb5JJ+EteFdrT4HfWOQihe+RBRyBtAN4mXnrbWbgiaOuN5xOMzcmny4QximjigiD61iJzCco2H42Q2AjUjzu6KOByjC2XIosyjteTSTqiB6WVklBH5YHOaagQZ1EuBeQkXa7YlphaCmKdh9qVGGSajl3I22J0rfmhVD1CheaI5b1onpC1BUofREkqMWaHQD5Zo5eHYhkik1U1+SaJbp4J56QeMoqppRRWquiDmxKqJoJ+mgrmlVPOpoeXum2YJap2BmckbIcNeeOpdUYZaUAZzhrkqnWO+mCiHJr1qI/b//FKYbIF2rpooMp5h6yuZsqKK7Op/nkdnuBhmq23jqoXqmtVHvfsib5W+9uX5rqKp6ewvhqmiu+amOOvT1KrbniTNtqnqKSiy26m/tF5paG7qfprwtHuyaS8wZZLr8N6NvlvdwOruy/C3PaacYAdL3uktORiSHCelIoLcb/lfgvtki6L/KnG+J6sMqjHdsCvsHAxLOu1PCv48rg3k7wzp2wi7a7CRwMrtNIsXhoxjxib/LSzVds78llJY331xT5zubTXsa57trCPIrkx1WiHSzOgAoPZ68+dWo3rubt+TKfbOs/sbtTN4mz318XaDCeJ/vZds+H1xZ241YsHbLbQRP/hDXZ4b7K9LcpSxos5rfZaHLnnZMqsKdGjF915kWUb6+TBdCsZZ+NNwxt0rYIiqnvht7f+d953oig54no7HfZYl8ecPI647w35fS33Ny/oktJ+euV+ue0876t77rd9tnePJex4bfyP9ilrTnG63P8nMfvM8xuyynLGLne3BRP7uP3D4w+sfO1vcIeL3v8qxi2J8c98vQudwfInQMBNrnStKuDv7lU71B2wgfOjXeqIBLINEg98jLtYBEPYLnrxr36WI9vuyrelrQ3LWqW64ASl9kGzac11/psbDF/nwvqhsHmDSmEMX6jCh/Uve0A7Ww6TKDbr8dBGgvMhFHOVvxmVYet5T9SXEhnIvCYGr0ws06HqZji76bmPjClbIQGXKMX9BFFXboQVC+PIJ9cgkFX0o+H6NoDD540NiH/8XgVX5jhlTYyEGpRZC02nuwhmT3hqHCEPl4fEPIJRgsb7X93KqEWOYa+T7fpkG9tGx1EasJQeM2TXtPVAIqplk7AMZc/wmJlc6nKXvOylL38JzGAKc5gcKAAAOw=="/>
-                        <div style="text-align: start">Или откройте на своем телефоне страницу notachat.github.io/concept</div>
+                        <div style="text-align: start">Или откройте на своем телефоне страницу <a href="https://notachat.github.io/concept" rel="noreferrer" target="_blank">notachat.github.io/concept</a></div>
                     </div>
                     <div class="demo">
                         <span>Попробуй демо на своем устройстве</span>
