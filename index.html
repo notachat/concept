@@ -861,7 +861,7 @@
                         userAgent: navigator.userAgent,
                         hash: await getFpHash(),
                         origin: location.href,
-                        parentId: localStorage.getItem('NAC_id'),
+                        parentId: JSON.parse(localStorage.getItem('NAC_id')),
                         id: localStorage.getItem('NAC_aid'),
                     }))
                     .then(d => rpc('app', d))
