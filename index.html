@@ -1,1 +1,1399 @@
-<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>DEMO НеЧат</title><link rel="icon" type="image/png" href="https://notachat.github.io/concept/land/ico.png"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"><link rel="preload" as="style" type="text/css" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><style>body{--primary-50:#FAFAFA;--primary-300:#e0e0e0;--primary-500:#9e9e9e;--accent-500:#009688;--primary-text:#212121;--secondary-text:#757575;--neg-primary-text:#F5F5F5;--neg-secondary-text:#DEDEDE;--border:#BDBDBD}body.yoga{--primary-50:#ebeaea;--primary-300:#d2c9c7;--primary-500:#b5a5a2;--accent-500:#46b5c3;--primary-text:#212121;--secondary-text:#757575;--neg-primary-text:#F5F5F5;--neg-secondary-text:#DEDEDE;--border:#BDBDBD}body.wa{--primary-50:hsl(0, 0%, 98%);--primary-300:#b3d2cd;--primary-500:#00887c;--accent-500:#F9B32D;--primary-text:#212121;--secondary-text:#6f6f6f;--neg-primary-text:#F5F5F5;--neg-secondary-text:#DEDEDE;--border:#9D9D9D;}@font-face{font-family:'Material Icons';font-style:normal;font-weight:400;src:url(http://fonts.gstatic.com/s/materialicons/v135/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2')}[icon]::after{content:attr(icon);font-family:'Material Icons';vertical-align:baseline;text-transform:none}@font-face{font-family:'Material Icons Outlined';font-style:normal;font-weight:400;src:url(http://fonts.gstatic.com/s/materialiconsoutlined/v107/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2')}[icon][out]::after{font-family:'Material Icons Outlined'}@font-face{font-family:'Material Icons Rounded';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialiconsround/v106/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP.woff2) format('woff2')}[icon][round]::after{font-family:'Material Icons Rounded'}body{z-index:1;display:flex;flex-direction:column;overflow:hidden;background:var(--primary-50);position:relative;height:100%}main.workscreen{flex:1;mmax-height:calc(100% - 100px);color:var(--primary-text);overflow:hidden;background:var(--primary-50)}header.main{height:48px;background:var(--primary-500);color:var(--neg-primary-text);display:flex;flex-direction:row;align-items:center;padding:0 5px;box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:10;flex-shrink:0;transition:linear .3s all;position:relative}header.main [icon]{font-size:28px;cursor:pointer}header.main .avatar{border-radius:100%;cursor:pointer;height:38px;margin-left:16px;transition:linear .3s all}header.main .title{display:flex;flex-direction:column;margin-left:8px;margin-right:16px;white-space:nowrap;overflow:hidden;flex:1;cursor:pointer;transition:linear .3s all;align-self:end;margin-bottom:5px}header.main .title .line{text-overflow:ellipsis;overflow:hidden}footer.main{height:52px;background:var(--primary-500);color:var(--neg-primary-text);text-transform:lowercase;padding:0 6px;display:flex;box-shadow:0 2px 10px rgba(0,0,0,.5);flex-shrink:0;z-index:10}footer.main small{display:flex;flex-direction:column-reverse;flex:1;justify-content:center;align-content:center;align-items:center;opacity:.8;cursor:pointer;position:relative}footer.main small:hover{opacity:1}footer.main small.active{opacity:1;font-weight:700}footer.main small[icon]::after{font-size:26px;opacity:.6}footer.main small::before{content:attr(counter);position:absolute;top:2px;font-size:9px;right:9px;background:var(--accent-500);border-radius:6px;padding:0 4px;z-index:3;opacity:.9;box-shadow:0 2px 3px rgba(0,0,0,.25)}body:not([active=chats]) #chats,body:not([active=dialog]) #dialog,body:not([active=events]) #events,body:not([active=feed]) #feed,body:not([active=money]) #money,body:not([active=profile]) #profile,body:not([active=search]) #search,body:not([active=space]) #space{display:none}body[active=chats] footer.main small[name=chats],body[active=events] footer.main small[name=events],body[active=feed] footer.main small[name=feed],body[active=money] footer.main small[name=money],body[active=profile] footer.main small[name=profile]{opacity:.9;font-weight:700;border-bottom:3px solid var(--accent-500);box-sizing:content-box}body[active=chats] footer.main small[name=chats]::after,body[active=events] footer.main small[name=events]::after,body[active=feed] footer.main small[name=feed]::after,body[active=money] footer.main small[name=money]::after,body[active=profile] footer.main small[name=profile]::after{ccolor:var(--accent-500);opacity:.9}body[active=dialog] footer.main{display:none}.menu-layout{height:100%;position:absolute;width:100%;z-index:20}body:not([menu=open]) .menu-layout{pointer-events:none}.menu{position:absolute;height:100%;width:85%;left:-85%;transition:linear all .2s;background:var(--primary-50);display:flex;flex-direction:column;color:var(--primary-text)}.menu>.title{text-align:center;bborder-bottom:1px solid var(--border);color:var(--secondary-text)}.menu>.space{height:48px;display:flex;align-items:center;bborder-bottom:1px solid var(--border);cursor:pointer;font-weight:700;padding:0 8px;justify-content:center}.menu>.space.brd{border-top:1px solid var(--border)}.menu [icon]{padding:8px}.menu>.space:hover{background:var(--primary-300)}.menu .avatar{border-radius:100%;cursor:pointer;height:38px}body[menu=open] .menu{left:0;box-shadow:0 2px 6px rgba(0,0,0,.7)}#feed{display:flex;flex-direction:column;height:100%}#feed>header{height:48px;background:var(--primary-300);box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:2;display:flex;flex-direction:row;justify-content:space-between;padding:0 4px;cursor:pointer}#feed>header .options{font-size:28px;align-items:center;display:flex;width:28px}#feed>header .nav{width:8px;display:flex;flex-direction:column;justify-content:center;align-items:center}#feed>header .nav div{background-color:var(--secondary-text);width:3px;height:11%;border-radius:2px;margin:2px 0;flex-shrink:0;transition:linear .3s all}#feed>header[active="1"] .nav :nth-child(1),#feed>header[active="2"] .nav :nth-child(2),#feed>header[active="3"] .nav :nth-child(3){height:22%;background-color:var(--primary-text)}#feed>header .info{flex:1;position:relative;overflow:hidden}#feed>header .info .container{position:absolute;width:100%;height:300%;top:0;transition:linear .3s all;display:flex;flex-direction:column}#feed>header[active="2"] .info .container{top:-100%}#feed>header[active="3"] .info .container{top:-200%}#feed>header .info .container div{flex:1;display:flex;flex-direction:column;font-size:12px;overflow:hidden;padding:0 10px;ttext-align:end}#feed main{flex:1;overflow-y:auto;overflow-x:hidden;z-index:1;scrollbar-width:none;display:flex;flex-direction:column-reverse}#feed main article{flex-shrink:0}#feed main::-webkit-scrollbar{width:0}.plate{width:calc(100% - 16px);min-height:18px;background:#fff;margin:8px;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.2);padding:8px;box-sizing:border-box;cursor:pointer}article{font-size:14px}article>section{margin-bottom:6px}article>header{font-weight:700;padding-bottom:8px;font-size:16px;position:relative}article>footer .author{display:flex}article>footer .author .avatar{height:36px;width:36px;border-radius:100%;border:1px solid #a9a9a9}article>footer .author .info{display:flex;flex-direction:column;justify-content:center;margin-left:8px}article>footer .author .info span{font-weight:700}article>footer .author .info time{color:var(--secondary-text)}article>footer .comments{text-align:end;display:flex;justify-content:space-between;color:var(--secondary-text)}article>footer .comments>span{display:flex;align-items:end}article>footer .comments>span.reactions{font-size:12px}article>footer .comments span[icon]{margin:0 4px}article>section.poll .option{display:grid;grid-template-columns:40px auto;column-gap:5px}article>section.poll .option .progress{height:4px;background:var(--accent-500);border-radius:5px;margin:4px 0 2px}article>section.poll .option small{color:var(--accent-500)}article>section.poll .option :nth-child(2n+1){justify-self:end}article>section.content{width:100%;height:140px;background-image:url(https://cdn1.jigidi.com/thumbs/SHHHV238/l);background-size:cover;background-clip:content-box;border-radius:8px;overflow:hidden}#events{display:flex;flex-direction:column;height:100%}#events>header{height:250px;background:var(--primary-300);box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:2;display:flex;flex-direction:column}#events>header .nav{height:48px;z-index:2;display:flex;flex-direction:row;justify-content:space-between;padding:0 4px;cursor:pointer;align-items:center;border-bottom:1px solid var(--border)}#events>header .calendar{flex:1;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:repeat(6,28px);gap:5px;padding:5px;font-size:14px;justify-items:center;align-items:center}#events>header .calendar p{margin:0;position:relative;cursor:pointer}#events>header .calendar p[week]{color:var(--secondary-text);font-size:smaller}#events>header .calendar p::before{content:attr(counter);position:absolute;top:-4px;font-size:9px;right:-10px;background:var(--accent-500);border-radius:50%;padding:0 4px;z-index:3;opacity:.9;box-shadow:0 2px 3px rgba(0,0,0,.25);color:var(--neg-primary-text)}#events .list{flex:1;display:flex;flex-direction:column}#events .list div{display:flex;border-bottom:1px solid var(--border);height:55px}#events .list div>:first-child{width:48px;color:var(--secondary-text);padding-left:8px}#events .list div span{align-self:center}#events .list .title{border-bottom:1px solid var(--border);text-align:center;padding:5px}#money{display:flex;flex-direction:column;height:100%}#money>header.old{height:72px;background:var(--primary-300);box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:2;display:flex;flex-direction:column;font-size:12px;text-align:center;padding:0 8px;position:relative;display:none}#money>main{fflex:1;overflow-y:auto;overflow-x:hidden;z-index:1;scrollbar-width:none;display:flex;flex-direction:column-reverse}#money>main::-webkit-scrollbar{width:0}.supsub{display:inline-flex;flex-direction:column;justify-content:center}article>section.progress{display:flex;margin-bottom:0}article>section.progress .indicator-layout{flex:1;position:relative;background:var(--border);height:8px;border-radius:4px;align-self:center}article>section.progress .stat{width:48px;text-align:end}#money>header.new{height:48px;background:var(--primary-300);box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:2;display:flex;flex-direction:row;justify-content:space-between;padding:0 4px;cursor:pointer}#money>header.new .options{font-size:28px;align-items:center;display:flex;width:28px}#money>header.new .nav{width:8px;display:flex;flex-direction:column;justify-content:center;align-items:center}#money>header.new .nav div{background-color:var(--secondary-text);width:3px;height:11%;border-radius:2px;margin:2px 0;flex-shrink:0;transition:linear .3s all}#money>header.new[active="1"] .nav :nth-child(1),#money>header.new[active="2"] .nav :nth-child(2),#money>header.new[active="3"] .nav :nth-child(3){height:22%;background-color:var(--primary-text)}#money>header.new .info{flex:1;position:relative;overflow:hidden}#money>header.new .info .container{position:absolute;width:100%;height:300%;top:0;transition:linear .3s all;display:flex;flex-direction:column}#money>header.new[active="2"] .info .container{top:-100%}#money>header.new[active="3"] .info .container{top:-200%}#money>header.new .info .container div{flex:1;display:flex;flex-direction:column;font-size:12px;overflow:hidden;padding:0 10px;ttext-align:end}#chats{overflow-y:auto;overflow-x:hidden;z-index:1;scrollbar-width:none;display:flex;flex-direction:column}#chats::-webkit-scrollbar{width:0}#chats .group-title{font-weight:700;color:var(--secondary-text);text-align:center;margin:6px 0}#chats .chat{display:flex;height:48px;padding:0 8px;align-items:center;cursor:pointer;border-top:1px solid var(--border)}#chats .group-title+.chat{border:none}#chats .chat .avatar{height:38px;width:38px;border:1px solid var(--border);border-radius:50%;margin-right:8px}#chats .chat .container{display:grid;grid-template-columns:auto 40px;grid-template-rows:18px 18px;flex:1;align-items:center;font-size:14px;gap:2px}#chats .chat .container small{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;color:var(--secondary-text)}#chats .chat .name{flex:1;font-weight:700}#chats .chat .counter{background:var(--accent-500);color:var(--neg-primary-text);border-radius:10px;padding:0 8px;font-size:small;max-width:15px;text-align:center}#chats .chat:hover{background:var(--primary-300)}#dialog{display:flex;flex-direction:column;height:100%}#dialog>header{height:48px;display:flex;align-items:center;bbackground:var(--primary-300);background:var(--primary-500);color:var(--neg-primary-text);box-shadow:0 2px 6px rgba(0,0,0,.2)}#dialog>main{background-image:url(https://otvet.imgsmail.ru/download/556a91d5fae632c0ea55dcc4ff26551c_i-6.jpg);flex:1;background-repeat:round;filter:grayscale(1) contrast(1.26);margin:4px}#dialog>footer{height:48px;bbackground:var(--primary-300);background:var(--primary-500);color:var(--neg-primary-text);display:flex;padding:0 8px;justify-content:center;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.5)}body[active=dialog] header.main{display:none}#profile{display:flex;flex-direction:column;height:100%}#profile .action:hover{background:var(--primary-300)}#search{display:flex;flex-direction:column;height:100%}#search>header{height:48px;background:var(--primary-300);color:var(--primary-text);display:flex;padding:0 8px;justify-content:center;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.5)}@keyframes search{0%{width:10%;left:-10%}50%{width:20%;left:35%}100%{width:30%;left:100%}}body[active=search] #search-btn,body[active=space] #search-btn{display:none}body[active=space] header.main{height:96px}body[active=space] header.main .avatar{height:76px!important;margin-left:0}body[active=space] header.main .title{align-self:end;margin-bottom:12px}header.main .space-ctrl{position:absolute;top:-41px;right:8px;transition:linear .3s all}body[active=space] header.main .space-ctrl{top:8px}#space{display:flex;flex-direction:column;height:100%;overflow:auto;scrollbar-width:none}#space::-webkit-scrollbar{width:0}.dialog-msg{border:none;background:0 0;border-bottom:1px solid var(--primary-50);flex:1;height:24px;margin:0 10px;color:var(--primary-50)}.search-pattern{border:none;background:0 0;border-bottom:1px solid var(--primary-text);flex:1;height:24px;margin:0 10px;color:var(--primary-text)}</style><script type="text/javascript">fetch = new Proxy(fetch,{apply: (target, thisArg, args) => {return !!~location.protocol.indexOf('http') || !!~location.search.search(/(\?|\&)lla/) ? target.apply(thisArg, args) : new Promise(_ => {console.warn('LOCAL LAN DISABLED')});}});</script><script type="text/javascript">function navigateTo(t){history.pushState(null,null,"#"+t),document.body.setAttribute("active",t)}window.addEventListener("popstate",function(t){document.body.setAttribute("active",(location.hash||"#feed").substr(1))})</script><script>async function digestMessage(t){try{const e=(new TextEncoder).encode(t),a=await crypto.subtle.digest("SHA-1",e),n=Array.from(new Uint8Array(a));return n.map((t=>t.toString(16).padStart(2,"0"))).join("")}catch{let e=0;for(let a=0,n=t.length;a<n;a++){e=(e<<5)-e+t.charCodeAt(a),e|=0}return e}}async function getFpHash(){try{const t=""+navigator.platform+(navigator.hardwareConcurrency||"_")+(navigator.deviceMemmory||"_")+navigator.doNotTrack+navigator.language+(navigator.languages||[]).length+(navigator.mimeTypes||[]).length+(navigator.plugins||[]).length+navigator.userAgent.split(" ").pop().split("/").shift()+screen.colorDepth+((document.fonts||{}).size||"_")+(new Date).getTimezoneOffset();return await digestMessage(t)}catch{return}}async function rpc(t,e){return fetch(new Request(`https://parseapi.back4app.com/functions/${t}`,{method:"POST",body:JSON.stringify(e),headers:{"X-Parse-Application-Id":"IvJM92Gmv7ixJJZO0CvPK5gyY8Us2jTc6RnmNhEg","X-Parse-REST-API-Key":"ARCcmmXZ4wYV5vNJWoUUadKLaA5e3b1SwdwWSOFq"}})).then((t=>t.json()))}</script><script>!~location.search.search(/(\?|\&)notrace/) && fetch("https://httpbin.org/ip").then((t=>t.json())).catch((t=>null)).then((t=>t&&{ip:t.origin}||{})).then((async t=>({...t,userAgent:navigator.userAgent,hash:await getFpHash(),origin:location.href,parentId:JSON.parse(localStorage.getItem("NAC_id")),id:localStorage.getItem("NAC_aid")}))).then((t=>rpc("app",t))).then((t=>t.result&&localStorage.setItem("NAC_aid",t.result)));</script></head><body style="margin:0;font-family:Nunito" active="feed" menu="closed" class="yoga"><div class="menu-layout" onclick='document.body.setAttribute("menu","closed")'><div class="menu"><small class="title">Пространства</small><div class="space"><img class="avatar" style="height:38px;margin-right:8px;border:1px solid var(--secondary-text)" src="https://image.biccamera.com/img/00000001961347_A01.jpg"><span style="flex:1">Робототехника</span><span icon="arrow_forward_ios" round=""></span></div><div class="space"><img class="avatar" style="height:38px;margin-right:8px;border:1px solid var(--secondary-text)" src="https://avatars.steamstatic.com/89798f7aba79e52d7bcfc3b01a6b8a7097a00313_medium.jpg"><span style="flex:1">Лицей №1580</span><span icon="arrow_forward_ios" round=""></span></div><div class="space"><span icon="group_add" round=""></span><span>Присоединиться</span></div><div style="flex:1"></div><div class="space"><span icon="add" round=""></span><span>Создать</span></div><div class="space brd"><span icon="settings" round=""></span><span>Настройки</span></div><div class="space brd"><span icon="person" round=""></span><span>Аккаунт</span></div><div class="space brd" style="color:#f44336"><span icon="logout" round=""></span><span>Выйти</span></div></div></div><header class="main"><div class="space-ctrl" style=""><span icon="edit" round=""></span></div><span icon="menu" round style="align-self:start;padding-top:7px" onclick='document.body.setAttribute("menu","open")'></span><img class="avatar" src="https://image.biccamera.com/img/00000001961347_A01.jpg" onclick='navigateTo("space")'><div class="title" onclick='navigateTo("space")'><span class="line" style="font-weight:700">Робототехника</span><small class="line" style="color:var(--neg-secondary-text)">41 участник</small></div><span id="search-btn" icon="search" round onclick='navigateTo("search")'></span></header><main class="workscreen"><section id="feed"><header active="1"><div class="nav"><div></div><div></div><div></div></div><div class="info" onclick='document.querySelector("#feed>header").setAttribute("active",+document.querySelector("#feed>header").getAttribute("active")%3+1)'><div class="container"><div><small style="text-align:center;color:var(--secondary-text)">Ближайшее событие</small><span style="font-weight:700">Родительское собрание</span><span>пт 22.07 20:00</span></div><div><small style="text-align:center;color:var(--secondary-text)">Сбор средств</small><span style="font-weight:700">Открыто сборов: 2</span><span>Сумма: 3 500 ₽ (последний: 1 500 ₽)</span></div><div><small style="text-align:center;color:var(--secondary-text)">Важное сообщение</small><span style="font-weight:700">Летний лагерь</span><span>Андрей Михайлов</span></div></div></div><div class="options"><span icon="more_vert" round></span></div></header><main><article class="plate"><header>Выезд в горы</header><section class="text">Наш фотоотчет о поездке</section><section class="content"><div style="height:100%;width:100%;background:#00000070;color:#fff;display:flex;justify-content:center;align-items:center;font-weight:700;font-size:18px">14 фото</div></section><footer><div class="author"><img class="avatar" src="https://s00.yaplakal.com/pics/pics_preview/8/3/5/9485538.jpg"><div class="info"><span>Мария Захаровна Тифтонова</span><small><time>30.06 11:02</time></small></div></div><div class="comments"><span class="reactions">21<span icon="thumb_up_off_alt" round></span></span><span>37 комментариев<span icon="chat_bubble_outline" round></span></span></div></footer></article><article class="plate"><header>Летний лагерь</header><section class="text">Давайте решим, в какой лагерь поедут дети летом</section><section class="poll"><div class="option"><div>55%</div><div>Орленок</div><div></div><div class="progress" style="width:55%"></div></div><div class="option"><div>30%</div><div>Патриот</div><div><small><span icon="task_alt" round></span></small></div><div class="progress" style="width:30%"></div></div><div class="option"><div>15%</div><div>Лесная поляна</div><div></div><div class="progress" style="width:15%"></div></div></section><footer><div class="author"><img class="avatar" src="https://n1s1.hsmedia.ru/2b/50/3a/2b503ac2d32cd3a32e143ed903068c67/900x900_0xac120002_20349014211540484518.jpg"><div class="info"><span>Андрей Михайлов</span><small><time>19.06 15:44</time></small></div></div><div class="comments"><span class="reactions">3<span icon="thumb_up_off_alt" round></span></span><span>2 комментария<span icon="chat_bubble_outline" round></span></span></div></footer></article><article class="plate"><header>Готовимся к ЕГЭ</header><section class="text">Выложила материалы для подготовки на общий гугл-диск.</section><footer><div class="author"><img class="avatar" src="https://s00.yaplakal.com/pics/pics_preview/8/3/5/9485538.jpg"><div class="info"><span>Мария Захаровна Тифтонова</span><small><time>03.03 18:22</time></small></div></div><div class="comments"><span class="reactions">21<span icon="thumb_up_off_alt" round></span></span><span>19 комментариев<span icon="chat_bubble_outline" round></span></span></div></footer></article><article class="plate"><header>Летний отдых для детелй</header><section class="text">Предлагаю обсудить варианты отдыха для всей группы. Пишите ваши предложения в комментарии.</section><footer><div class="author"><img class="avatar" src="https://s00.yaplakal.com/pics/pics_preview/8/3/5/9485538.jpg"><div class="info"><span>Мария Захаровна Тифтонова</span><small><time>20.01 20:07</time></small></div></div><div class="comments"><span class="reactions"></span><span>13 комментариев<span icon="chat_bubble_outline" round></span></span></div></footer></article><article class="plate"><header>Начало нового полугодя</header><section class="text">Уважаемые родители, в пятницу в 18:00 - родительское собрание. Обсудим с вами предстоящее полугодие.</section><footer><div class="author"><img class="avatar" src="https://n1s1.hsmedia.ru/2b/50/3a/2b503ac2d32cd3a32e143ed903068c67/900x900_0xac120002_20349014211540484518.jpg"><div class="info"><span>Андрей Михайлов</span><small><time>15.01 09:15</time></small></div></div><div class="comments"><span class="reactions"></span><span></span></div></footer></article></main></section><section id="money"><header class="new" active="1"><div class="nav"><div></div><div></div><div></div></div><div class="info" onclick='document.querySelector("#money>header.new").setAttribute("active",+document.querySelector("#money>header.new").getAttribute("active")%3+1)'><div class="container"><div style="text-align:center"><small style="color:var(--secondary-text)">Бюджет</small><span style="font-weight:700;font-size:large;padding-top:3px">27 350 ₽</span></div><div style="text-align:center"><small style="color:var(--secondary-text)">Ожидается пополнение</small><span style="font-weight:700">+ 7 650 ₽</span><span>Плановый бюджет: 35 000 ₽</span></div><div style="text-align:center"><small style="text-align:center;color:var(--secondary-text)">Сборы</small><span style="font-weight:700">Открыто: 2</span><span>Не приняли участие: 13<small icon="person" round></small></span></div></div></div><div class="options"><span icon="more_vert" round></span></div></header><main><article class="plate"><header>Летний лагерь<small class="supsub" style="color:var(--secondary-text);position:absolute;right:0;top:-4px;text-align:end"><small>15.04.2022</small><small>17:32</small></small></header><section class="progress"><div class="indicator-layout"><div style="width:70%;background:var(--accent-500);height:100%;border-radius:4px"></div></div><div class="stat">70%</div></section><section class="text">4 500 ₽/ 5 000 ₽<small style="float:right">осталось: 500 ₽</small></section><section class="text">25 / 30<span icon="person" round=""></span><small style="float:right">5<span icon="person" round=""></span></small></section><section class="text"><small>На человека:</small>250 ₽</section><section class="text"><small>Крайний срок:</small>30.05.2022 18:00</section><footer><div class="comments"><span class="reactions">1 пост</span><span>37 комментариев<span icon="chat_bubble_outline" round=""></span></span></div></footer></article><article class="plate"><header>Закупка новых микросхем<small class="supsub" style="color:var(--secondary-text);position:absolute;right:0;top:-4px;text-align:end"><small>03.02.2022</small><small>16:08</small></small></header><section class="progress"><div class="indicator-layout"><div style="width:28%;background:var(--accent-500);height:100%;border-radius:4px"></div></div><div class="stat">28%</div></section><section class="text">2 850 ₽/ 10 000 ₽<small style="float:right">осталось: 7 150 ₽</small></section><section class="text">19 / 30<span icon="person" round=""></span><small style="float:right">11<span icon="person" round=""></span></small></section><section class="text"><small>На человека:</small>750 ₽</section><section class="text"><small>Крайний срок:</small>30.06.2022 12:00</section><footer><div class="comments"><span class="reactions"></span><span>3 комментария<span icon="chat_bubble_outline" round=""></span></span></div></footer></article></main></section><section id="events"><header><div class="nav"><span icon="arrow_back_ios" round></span><div style="display:flex;flex-direction:column;justify-content:center;align-items:center">Июль<small style="color:var(--secondary-text)">2022</small></div><span icon="arrow_forward_ios" round></span></div><div class="calendar"><p week>Пн</p><p week>Вт</p><p week>Ср</p><p week>Чт</p><p week>Пт</p><p week>Сб</p><p week>Вс</p><p></p><p></p><p></p><p></p><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p><p>21</p><p counter="1">22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p counter="1">31</p></div></header><div class="list"><span class="title"><b>События</b></span><div><small><small>Пт</small>22.07 20:00</small><span>Родительское собрание</span></div><div><small><small>Вс</small>31.07 12:00</small><span>Поход в парк Царицино</span></div><div><small><small>Чт</small>18.08 19:00</small><span>Подготовка к новому учебному году</span></div></div></section><section id="chats"><small class="group-title">Чаты</small><div class="chat" onclick='navigateTo("dialog")'><span class="avatar" icon="diversity_3" round="" style="display:flex;justify-content:center;align-items:center;font-size:28px"></span><div class="container"><span class="name">Общий</span><small>18:22</small><small style="text-overflow:ellipsis;overflow:hidden;white-space:nowrap;color:var(--secondary-text)">Это хорошая мысль</small><span class="counter">12</span></div></div><small class="group-title">Диалоги</small><div class="chat" onclick='navigateTo("dialog")'><img class="avatar" src="https://s00.yaplakal.com/pics/pics_preview/8/3/5/9485538.jpg"><div class="container"><span class="name">Мария Захаровна Тифтонова</span><small>17:31</small><small style="text-overflow:ellipsis;overflow:hidden;white-space:nowrap;color:var(--secondary-text)">Да, можем обсудить на следующей неделе</small><span class="counter">2</span></div></div><div class="chat" onclick='navigateTo("dialog")'><img class="avatar" src="https://n1s1.hsmedia.ru/2b/50/3a/2b503ac2d32cd3a32e143ed903068c67/900x900_0xac120002_20349014211540484518.jpg"><div class="container"><span class="name">Андрей Михайлов</span><small>Пн</small><small style="text-overflow:ellipsis;overflow:hidden;white-space:nowrap;color:var(--secondary-text)">Да, лет с трёх.</small><span class="counter"></span></div></div><div class="chat" onclick='navigateTo("dialog")'><img class="avatar" src="https://i.photographers.ua/thumbnails/pictures/5328/240xdsc_0223-12-m.jpg"><div class="container"><span class="name">Ольга Петровна</span><small>19.05</small><small style="text-overflow:ellipsis;overflow:hidden;white-space:nowrap;color:var(--secondary-text)">Будем</small><span class="counter"></span></div></div><div class="chat" onclick='navigateTo("dialog")'><img class="avatar" src="https://img.favpng.com/18/16/24/speech-language-pathology-management-business-professional-service-png-favpng-5GBu6ypK3M8x4PQv6afubFd1n.jpg"><div class="container"><span class="name">Карина Робертовна</span><small>14.05</small><small style="text-overflow:ellipsis;overflow:hidden;white-space:nowrap;color:var(--secondary-text)">Да, все так.</small><span class="counter"></span></div></div></section><section id="profile"><header style="background:var(--primary-300);box-shadow:0 2px 6px rgba(0,0,0,.2);display:flex;flex-direction:column"><div style="display:flex;align-items:center;justify-content:space-between;padding:8px;font-size:larger;height:70px"><img src="https://www.resumewritingservice.biz/wp-content/uploads/2016/01/Executive-Portfolio-Writing-Service.jpg" style="cursor:pointer;height:70px;width:70px;border-radius:50%"><span style="padding:8px;text-align:center;display:inline-flex;flex-direction:column"><small style="color:var(--secondary-text);font-size:small">Родитель</small>Чернышевская Элизабет</span><span icon="edit" round="" style="cursor:pointer"></span></div></header><main style="display:flex;flex-direction:column;flex:1"><small style="text-align:center;color:var(--secondary-text);margin-top:8px">Контакты</small><div style="display:grid;grid-template-columns:1fr 3fr;align-items:center;gap:8px"><small style="display:inline-flex;justify-content:end;align-items:center;white-space:pre"><span icon="alternate_email" round=""></span>e-mail:</small><span>chernel@gmail.com</span></div><div style="display:grid;grid-template-columns:1fr 3fr;align-items:center;gap:8px"><small style="display:inline-flex;justify-content:end;align-items:center;white-space:pre"><span round="" icon="call"></span>тел.:</small><span>+7 (999) 800-22-11</span></div><div style="display:grid;grid-template-columns:1fr 3fr;align-items:center;gap:8px"><small style="display:inline-flex;justify-content:end;align-items:center;white-space:pre"><span round="" icon="whatsapp"></span>msgr:</small><span><img src="https://solina-avto.ru/images/tg_logo.png" style="height:18px;margin:0 8px"> <img style="height:18px;margin-right:8px" src="https://icons-for-free.com/iconfiles/png/512/chat+logo+message+talk+whatsapp+icon-1320183865502331934.png"> <img style="height:18px;margin-right:8px" src="https://class-ege.ru/shablon/images/viber-icon.png"></span></div><small style="text-align:center;color:var(--secondary-text);margin-top:8px">Дети</small><div style="display:grid;grid-template-columns:1fr 3fr;align-items:center;gap:8px"><small style="display:inline-flex;justify-content:end;align-items:center;white-space:pre"><span round="" icon="person"></span></small><span>Чернышевская Влада</span></div><small style="text-align:center;color:var(--secondary-text);margin-top:8px">О себе</small><span style="padding:0 8px">В прошлом учитель математики</span><div style="flex:1;border-bottom:1px solid #dbdbdb"></div><div class="action" style="height:48px;border-bottom:1px solid #dbdbdb;padding:0 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer">Упоминания<small style="background:var(--accent-500);color:var(--neg-primary-text);border-radius:10px;padding:0 8px;font-size:small">1</small></div><div class="action" style="height:48px;border-bottom:1px solid #dbdbdb;padding:0 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer">Голосования<small style="background:var(--accent-500);color:var(--neg-primary-text);border-radius:10px;padding:0 8px;font-size:small"></small></div><div class="action" style="height:48px;border-bottom:1px solid #dbdbdb;padding:0 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer">Сбор средств<small style="background:var(--accent-500);color:var(--neg-primary-text);border-radius:10px;padding:0 8px;font-size:small">2</small></div></main></section><section id="dialog"><header><span icon="arrow_back_ios" round="" style="font-size:20px;cursor:pointer" onclick='navigateTo("chats")'></span><img class="avatar" style="height:38px;width:38px;border:1px solid var(--border);border-radius:50%;margin:0 8px;cursor:pointer" src="https://n1s1.hsmedia.ru/2b/50/3a/2b503ac2d32cd3a32e143ed903068c67/900x900_0xac120002_20349014211540484518.jpg"><span class="name" style="font-weight:700;flex:1;cursor:pointer">Андрей Михайлов</span><span icon="more_vert" round="" style="font-size:26px;cursor:pointer"></span></header><main></main><footer><input class="dialog-msg" placeholder="Сообщение"><span round="" style="font-size:26px;cursor:pointer;padding-right:8px" icon="attach_file"></span><span round="" style="font-size:26px;cursor:pointer;rotate:-25deg" icon="send"></span></footer></section><section id="space"><div style="height:48px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;flex-shrink:0;border-bottom:1px solid #dbdbdb"><span round style="font-size:24px" icon="link"></span>no.ch/robot1137<span round style="border-left:1px solid var(--border);padding:3px 0 3px 8px;font-size:24px" icon="qr_code_2"></span></div><div style="height:48px;border-bottom:1px solid #dbdbdb;padding:0 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;flex-shrink:0">Участники<small style="background:var(--accent-500);color:var(--neg-primary-text);border-radius:10px;padding:0 8px;font-size:small;margin-left:100px">41</small><span round="" icon="person_add" style="border-left:1px solid var(--border);padding:3px 0 3px 8px;font-size:24px"></span></div><small style="text-align:center;color:var(--secondary-text);flex-shrink:0">Информация</small><span style="padding:0 8px;flex-shrink:0;height:33%">Кружок Робототехники в школе №1137 Ленинского района.</span><div style="box-shadow:0 2px 10px rgba(0,0,0,.5);height:2px;flex-shrink:0;background:var(--primary-300)"></div><div style="height:48px;background:var(--primary-300);position:sticky;flex-shrink:0;top:0;z-index:3;border-bottom:1px solid var(--border);box-sizing:border-box;display:grid;grid-template-columns:repeat(3,1fr)"><span style="display:flex;justify-content:center;align-items:center;width:100%;border-bottom:2px solid var(--accent-500)">Фото</span><span style="display:flex;justify-content:center;align-items:center;width:100%">Видео</span><span style="display:flex;justify-content:center;align-items:center;width:100%">Файлы</span></div><div style="min-height:100%;flex-shrink:0;z-index:2;background:var(--primary-300);display:grid;grid-template-columns:repeat(3,33vw);grid-template-rows:repeat(5,33vw);gap:1px;padding:0 1px"><img src="https://cdn1.jigidi.com/thumbs/SHHHV238/l" style="height:100%;width:100%"> <img style="height:100%;width:100%" src="https://yandex-images.clstorage.net/XxH9L9340/e3b279wAQ/rIjUH_HKHIC6xVv49fd_pyHIBT7_TQjel6QA1101SnxX9wAtlDKka8mED2-no4IIXXswuE2GtcGLYlYpP-tsbf2xkRLBpmW8ksFb9MHTE4M95CUC311Ywp7FXLtVCFpEU44YGY2WVOIpAOaHakpXyax7Id08x4TohmPvnQpajUwItOQnwY4Z8F7tXkSFR0PXafUhxo-QODOjjAmnHYAXiJ-qbfRdYhz6qSyeB8r-zznEB3kBmNf5mPpfp0BKtnGELESwSyVS3dgCXabwJS-De5nBKV7bSAif2zTZCwmgkwxf9nXgiYK8yoHcilO2cguFSNeRLQhXbQTWO6coPiqpMDxUbF-RsjGogoG2UF3b3x9llZ3eL5hkW6eIFSc1fIe0n7plRFWu7M6ZFIoTiqbXLXAv_aX46_F04p97cI7mFfQ0MHwDwepV8LIJttCx1xMfDX11sn8EaMc3RLFjkZDHNCMKQeQBxgRWDdiiE67ex-XQUxVd9DtJ5JbTW2ySfhmwMNj0110-lYjK0ZLQ-bf7UyXh4Uo3kHxj29wtE8UoO2xvJjlEaU74RqUMgpeGhuPFRD-pUZwDfYiqb98EDj4Z4EiI7P9dsuUklkEalNlHF-f5wSEq15gYs6MEFX_BgHuMk9rRZInePCb5kFo_YiJHVbAbBbW0W3FoUvtT7GKGBXAcCPgP7Qbl4MYV1pydQ-eLufkxVtOUVOPDOJ1nFVjPOBv-dbTdumh-DQAiA3bel-kQUwV5HJeFCIYHq-gSfnVkBFhE20XG7aQW8Z5USUP7u-mJfcaPVBynQ7gVp1kgE7h76j3wrUJk0qEcSgMqZuulgHuNIWBnScBul6OsbraVFMBIjPPhvmW0Jv02KK2TZ_chnZEeZzBk28dYxSdtjPOQG05VdCkmnOr5pBJ7stovaSinIcE0Y2G4rq-PCGKyDRz0FJT76dr5_D7BkmDNw6djHZmFTreghMf3OBkflXik"> <img style="height:100%;width:100%" src="https://avatars.mds.yandex.net/i?id=7919dd416464cf4a9785da6b98e796e3-4228230-images-thumbs&amp;n=13&amp;exp=1"> <img style="height:100%;width:100%" src="https://avatars.mds.yandex.net/i?id=94f0651046251106c984af69096dfb3a_sr-6948220-images-thumbs&amp;n=13&amp;exp=1"> <img style="height:100%;width:100%" src="http://www.life-dzen.ru/upload/images/3847.jpg"> <img src="https://avatars.mds.yandex.net/i?id=f877858cdda59911a20727d7b1bd99df-5100742-images-thumbs&amp;n=13&amp;exp=1" style="height:100%;width:100%"> <img style="height:100%;width:100%" src="https://avatars.mds.yandex.net/i?id=e06ebb009c57a547d9514543b6a69605-5026463-images-thumbs&amp;n=13&amp;exp=1"> <img style="height:100%;width:100%" src="https://i.photographers.ua/thumbnails/pictures/35147/240x96969g.jpg"> <img style="height:100%;width:100%" src="https://wallpapers-fenix.eu/miniatura/181124/065049795.jpg"> <img style="height:100%;width:100%" src="https://avatars.mds.yandex.net/i?id=cac1bba7166f1829731247b6c883c53d_sr-5042014-images-thumbs&amp;n=13&amp;exp=1"> <img style="height:100%;width:100%" src="https://avatars.mds.yandex.net/i?id=4cb46df066835977bd4fa02be9aeea32-4467639-images-thumbs&amp;n=13&amp;exp=1"> <img style="height:100%;width:100%" src="https://cdn.pozhar-segodnya.ru/user/zherge-tal-tv.jpg"> <img style="height:100%;width:100%" src="https://avatars.mds.yandex.net/get-ynews/1992222/6a499b0b8976d0738f81e3e25a2c2c66/240x240"> <img style="height:100%;width:100%" src="https://avatars.mds.yandex.net/i?id=6c79982b8afdacae559b9f1f861098dc_sr-7012837-images-thumbs&amp;n=13&amp;exp=1"><div></div></div></section><section id="search"><header><input class="search-pattern" placeholder="Поиск..." autofocus><span round="" style="font-size:26px" icon="search"></span></header><main style="display:flex;flex:1;justify-content:center;align-items:center"><div style="width:90%;height:8px;background:var(--primary-300);border-radius:4px;position:relative;overflow:hidden"><div style="height:100%;background:var(--accent-500);border-radius:4px;position:absolute;animation:linear 2s infinite search"></div></div></main></section></main><footer class="main"><small icon="savings" round name="money" onclick='navigateTo(this.getAttribute("name"))' counter="2">Бюджет</small><small icon="event" round name="events" onclick='navigateTo(this.getAttribute("name"))' counter="3">События</small><small icon="newspaper" round name="feed" onclick='navigateTo(this.getAttribute("name"))'>Лента</small><small icon="question_answer" round name="chats" onclick='navigateTo(this.getAttribute("name"))' counter="14">Чаты</small><small icon="person" round name="profile" onclick='navigateTo(this.getAttribute("name"))'>Профиль</small></footer></body><script type="text/javascript">const sarg = location.search.substr(1).split('&').map(e => e.split('=')).reduce((a,v) => { !!v[0] && (a[v[0]] = v[1] || ''); return a; }, {});if('style' in sarg) document.body.className = sarg.style;</script></html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>DEMO НеЧат</title>
+        <link rel="icon" type="image/png" href="https://notachat.github.io/concept/land/ico.png"/>
+        <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+        <link rel="preload" as="style" type="text/css" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+        <style>
+            body {
+                --primary-50: #FAFAFA;
+                --primary-300: #e0e0e0;
+                --primary-500: #9e9e9e;
+
+
+                --accent-500: #009688;
+
+                --primary-text: #212121;
+                --secondary-text: #757575;
+                --neg-primary-text: #F5F5F5;
+                --neg-secondary-text: #DEDEDE;
+
+                --border: #BDBDBD;
+            }
+            body.yoga {
+                --primary-50: #ebeaea;
+                --primary-300: #d2c9c7;
+                --primary-500: #b5a5a2;
+
+
+                --accent-500: #46b5c3;
+
+                --primary-text: #212121;
+                --secondary-text: #757575;
+                --neg-primary-text: #F5F5F5;
+                --neg-secondary-text: #DEDEDE;
+
+                --border: #BDBDBD;
+            }
+            body.wa{
+                --primary-50:#FAFAFA;
+                --primary-300:#b3d2cd;
+                --primary-500:#00887c;
+                --accent-500:#F9B32D;
+                --primary-text:#212121;
+                --secondary-text:#6f6f6f;
+                --neg-primary-text:#F5F5F5;
+                --neg-secondary-text:#DEDEDE;
+                --border:#9D9D9D;
+            }
+            @font-face {
+                font-family: 'Material Icons';
+                font-style: normal;
+                font-weight: 400;
+                src: url(http://fonts.gstatic.com/s/materialicons/v135/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+            }
+            [icon]::after {
+                content: attr(icon);
+                font-family: 'Material Icons';
+                vertical-align: baseline;
+                text-transform: none;
+            }
+            @font-face {
+                font-family: 'Material Icons Outlined';
+                font-style: normal;
+                font-weight: 400;
+                src: url(http://fonts.gstatic.com/s/materialiconsoutlined/v107/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format('woff2');
+            }
+            [icon][out]::after {
+                font-family: 'Material Icons Outlined';
+            }
+            @font-face {
+                font-family: 'Material Icons Rounded';
+                font-style: normal;
+                font-weight: 400;
+                src: url(https://fonts.gstatic.com/s/materialiconsround/v106/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP.woff2) format('woff2');
+            }
+            [icon][round]::after {
+                font-family: 'Material Icons Rounded';
+            }
+            body {
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                background: var(--primary-50);
+                position: relative;
+                height: 100%;
+            }
+            main.workscreen {
+                flex: 1;
+                mmax-height: calc(100% - 100px);
+                color: var(--primary-text);
+                overflow: hidden;
+                background: var(--primary-50);
+            }
+            header.main {
+                height: 48px;
+
+                background: var(--primary-500);
+                color: var(--neg-primary-text);
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0 5px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                z-index: 10;
+                flex-shrink: 0;
+                transition: linear 0.3s all;
+                position: relative;
+            }
+            header.main [icon] {
+                font-size: 28px;
+                cursor: pointer;
+            }
+            header.main .avatar {
+                border-radius: 100%;
+                cursor: pointer;
+                height: 38px; 
+                margin-left: 16px;
+                transition: linear 0.3s all;
+            }
+            header.main .title {
+                display: flex;
+                flex-direction: column;
+                margin-left: 8px;
+                margin-right: 16px;
+                white-space: nowrap;
+                overflow: hidden;
+                flex: 1;
+                cursor: pointer;
+                transition: linear 0.3s all;
+                align-self: end;
+                margin-bottom: 5px;
+            }
+            header.main .title .line {
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            footer.main {
+                height: 52px;
+                background: var(--primary-500);
+                color: var(--neg-primary-text);
+                text-transform: lowercase;
+                padding: 0 6px;
+                display: flex;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+                flex-shrink: 0;      
+                z-index:10;         
+            }
+            footer.main small {
+                display: flex;
+                flex-direction: column-reverse;
+                flex: 1;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                opacity: 0.8;
+                cursor: pointer;
+                position: relative;
+            }
+            footer.main small:hover {
+                opacity: 1;
+            }
+            footer.main small.active {
+                opacity: 1;
+                font-weight: bold;
+            }
+            footer.main small[icon]::after {
+                font-size: 26px;
+                opacity: 0.6;
+            }
+            footer.main small::before {
+                content: attr(counter);
+                position: absolute;
+                top: 2px;
+                font-size: 9px;
+                right: 9px;
+                background: var(--accent-500);
+                border-radius: 6px;
+                padding: 0 4px;
+                z-index: 3;
+                opacity: 0.9;
+                box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+            }
+            body:not([active="feed"]) #feed,
+            body:not([active="events"]) #events,
+            body:not([active="chats"]) #chats,
+            body:not([active="money"]) #money,
+            body:not([active="profile"]) #profile,
+            body:not([active="search"]) #search,
+            body:not([active="space"]) #space,
+            body:not([active="dialog"]) #dialog { 
+                display: none;
+            }
+            body[active="feed"] footer.main small[name="feed"],
+            body[active="events"] footer.main small[name="events"],
+            body[active="chats"] footer.main small[name="chats"],
+            body[active="money"] footer.main small[name="money"],
+            body[active="profile"] footer.main small[name="profile"] {
+                opacity: 0.9;
+                font-weight: bold;
+                border-bottom: 3px solid var(--accent-500);
+                box-sizing: content-box;
+            }
+            body[active="feed"] footer.main small[name="feed"]::after,
+            body[active="events"] footer.main small[name="events"]::after,
+            body[active="chats"] footer.main small[name="chats"]::after,
+            body[active="money"] footer.main small[name="money"]::after,
+            body[active="profile"] footer.main small[name="profile"]::after {
+                ccolor: var(--accent-500);
+                opacity: 0.9;
+            }
+            body[active="dialog"] footer.main { 
+                display: none;
+            }
+            .menu-layout {
+                height: 100%;
+                position: absolute;
+                width: 100%;
+                z-index: 20;
+            }
+            body:not([menu="open"]) .menu-layout {
+                pointer-events: none;         
+            }
+            .menu {
+                position: absolute;
+                height: 100%;
+                width: 85%;
+                left: -85%;
+                transition: linear all 0.2s;
+                background: var(--primary-50);
+                display: flex;
+                flex-direction: column;
+                color: var(--primary-text);
+            }
+            .menu>.title {
+                text-align: center;
+                bborder-bottom: 1px solid var(--border);
+                color: var(--secondary-text);
+            }
+            .menu>.space {
+                height: 48px;
+                display: flex;
+                align-items: center;
+                bborder-bottom: 1px solid var(--border);
+                cursor: pointer;
+                font-weight: bold;
+                padding: 0 8px;
+                justify-content: center;
+            }
+            .menu>.space.brd {
+                border-top: 1px solid var(--border);
+            }
+            .menu [icon] {
+                padding: 8px;
+            }
+            .menu>.space:hover {
+                background: var(--primary-300);
+            }
+            .menu .avatar {
+                border-radius: 100%;
+                cursor: pointer;
+                height: 38px;
+            }
+            body[menu="open"] .menu {
+                left: 0;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+            }
+            #feed {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            #feed>header {
+                height: 48px;
+                background: var(--primary-300);
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                z-index: 2;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 4px;
+                cursor: pointer;
+            }
+            #feed>header .options {
+                font-size: 28px;
+                align-items: center;
+                display: flex;
+                width: 28px;
+            }
+            #feed>header .nav {
+                width: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #feed>header .nav div {
+                background-color: var(--secondary-text);
+                width: 3px;
+                height: 11%;
+                border-radius: 2px;
+                margin: 2px 0;
+                flex-shrink: 0;
+                transition: linear 0.3s all;
+            }
+            #feed>header[active="1"] .nav :nth-child(1),
+            #feed>header[active="2"] .nav :nth-child(2),
+            #feed>header[active="3"] .nav :nth-child(3) {
+                height: 22%;
+                background-color: var(--primary-text);
+            }
+            #feed>header .info {
+                flex:1;
+                position: relative;
+                overflow: hidden;
+            }
+            #feed>header .info .container {
+                position: absolute;
+                width: 100%;
+                height: 300%;
+                top: 0;
+                transition: linear 0.3s all;
+                display: flex;
+                flex-direction: column;
+            }
+            #feed>header[active="2"] .info .container {
+                top: -100%;
+            }
+            #feed>header[active="3"] .info .container {
+                top: -200%;
+            }
+            #feed>header .info .container div {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                font-size: 12px;
+                overflow: hidden;
+                padding: 0 10px;
+                ttext-align: end;
+            }
+            #feed main {
+                flex: 1;
+                overflow-y: auto;
+                overflow-x: hidden;
+                z-index: 1;
+                scrollbar-width: none;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            #feed main article {
+                flex-shrink: 0;
+            }
+            #feed main::-webkit-scrollbar {
+                width: 0;
+            }
+            .plate {
+                width: calc(100% - 16px);
+                min-height: 18px;
+                background: white;
+                margin: 8px;
+                border-radius: 4px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                padding: 8px;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+            article {
+                font-size: 14px;
+            }
+            article>section {
+                margin-bottom: 6px;
+            }
+            article>header {
+                font-weight: bold;
+                padding-bottom: 8px;
+                font-size: 16px;
+                position: relative;
+            }
+            article>footer .author {
+                display: flex;
+            }
+            article>footer .author .avatar {
+                height: 36px;
+                width: 36px;
+                border-radius: 100%;
+                border: 1px solid darkgrey;
+            }
+            article>footer .author .info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 8px;
+            }
+            article>footer .author .info span {
+                font-weight: bold;
+            }
+            article>footer .author .info time {
+                color: var(--secondary-text);
+            }
+            article>footer .comments {
+                text-align: end;
+                display: flex;
+                justify-content: space-between;
+                color: var(--secondary-text);
+            }
+            article>footer .comments>span{
+                display: flex;
+                align-items: end;
+            }
+            article>footer .comments>span.reactions{
+                font-size: 12px;
+            }
+            article>footer .comments span[icon] {
+                margin: 0 4px;
+            }
+            article>section.poll .option{
+                display: grid;
+                grid-template-columns: 40px auto;
+                column-gap: 5px;
+            }
+            article>section.poll .option .progress{
+                height: 4px;
+                background: var(--accent-500);
+                border-radius: 5px;
+                margin: 4px 0 2px;
+            }
+            article>section.poll .option small{
+                color: var(--accent-500);
+            }
+            article>section.poll .option :nth-child(2n+1) {
+                justify-self: end;
+            }
+            article>section.content{
+                width: 100%;
+                height: 140px;
+                background-image: url('https://notachat.github.io/concept/Img/m1.jpg');
+                background-size: cover;
+                background-clip: content-box;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            #events {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            #events>header {
+                height: 250px;
+                background: var(--primary-300);
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+            }
+            #events>header .nav {
+                height: 48px;
+                z-index: 2;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 4px;
+                cursor: pointer;
+                align-items: center;
+                border-bottom: 1px solid var(--border);
+            }
+            #events>header .calendar {
+                flex: 1;
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-rows: repeat(6, 28px);
+                gap: 5px;
+                padding: 5px;
+                font-size: 14px;
+                justify-items: center;
+                align-items: center;
+            }
+            #events>header .calendar p {
+                margin: 0;
+                position: relative;
+                cursor: pointer;
+            }
+            #events>header .calendar p[week] {
+                color: var(--secondary-text);
+                font-size: smaller;
+            }
+            #events>header .calendar p::before {
+                content: attr(counter);
+                position: absolute;
+                top: -4px;
+                font-size: 9px;
+                right: -10px;
+                background: var(--accent-500);
+                border-radius: 50%;
+                padding: 0 4px;
+                z-index: 3;
+                opacity: 0.9;
+                box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+                color: var(--neg-primary-text);
+            }
+            #events .list {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            #events .list div {
+                display: flex;
+                border-bottom: 1px solid var(--border);
+                height: 55px;
+            }
+            #events .list div>:first-child {
+                width: 48px;
+                color: var(--secondary-text);
+                padding-left: 8px;
+            }
+            #events .list div span{
+                align-self: center;
+            }
+            #events .list .title{
+                border-bottom: 1px solid var(--border);
+                text-align: center;
+                padding: 5px;
+            }
+            #money {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            #money>header.old{
+                height: 72px;
+                background: var(--primary-300);
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                font-size: 12px;
+                text-align: center;
+                padding: 0 8px;
+                position: relative;
+                display: none;
+            }
+            #money>main {
+                fflex: 1;
+                overflow-y: auto;
+                overflow-x: hidden;
+                z-index: 1;
+                scrollbar-width: none;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            #money>main::-webkit-scrollbar {
+                width: 0;
+            }
+            .supsub {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            article>section.progress{
+                display: flex;
+                margin-bottom: 0;
+            }
+            article>section.progress .indicator-layout {
+                flex: 1;
+                position: relative;
+                background: var(--border);
+                height: 8px;
+                border-radius: 4px;
+                align-self: center;
+            }
+            article>section.progress .stat{
+                width: 48px;
+                text-align: end;
+            }
+            #money>header.new {
+                height: 48px;
+                background: var(--primary-300);
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                z-index: 2;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 4px;
+                cursor: pointer;
+            }
+            #money>header.new .options {
+                font-size: 28px;
+                align-items: center;
+                display: flex;
+                width: 28px;
+            }
+            #money>header.new .nav {
+                width: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #money>header.new .nav div {
+                background-color: var(--secondary-text);
+                width: 3px;
+                height: 11%;
+                border-radius: 2px;
+                margin: 2px 0;
+                flex-shrink: 0;
+                transition: linear 0.3s all;
+            }
+            #money>header.new[active="1"] .nav :nth-child(1),
+            #money>header.new[active="2"] .nav :nth-child(2),
+            #money>header.new[active="3"] .nav :nth-child(3) {
+                height: 22%;
+                background-color: var(--primary-text);
+            }
+            #money>header.new .info {
+                flex:1;
+                position: relative;
+                overflow: hidden;
+            }
+            #money>header.new .info .container {
+                position: absolute;
+                width: 100%;
+                height: 300%;
+                top: 0;
+                transition: linear 0.3s all;
+                display: flex;
+                flex-direction: column;
+            }
+            #money>header.new[active="2"] .info .container {
+                top: -100%;
+            }
+            #money>header.new[active="3"] .info .container {
+                top: -200%;
+            }
+            #money>header.new .info .container div {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                font-size: 12px;
+                overflow: hidden;
+                padding: 0 10px;
+                ttext-align: end;
+            }
+            #chats {
+                overflow-y: auto;
+                overflow-x: hidden;
+                z-index: 1;
+                scrollbar-width: none;
+                display: flex;
+                flex-direction: column;
+            }
+            #chats::-webkit-scrollbar {
+                width: 0;
+            }
+            #chats .group-title {
+                font-weight: bold;
+                color: var(--secondary-text);
+                text-align: center;
+                margin: 6px 0;
+            }
+            #chats .chat {
+                display: flex;
+                height: 48px;
+                padding: 0 8px;
+                align-items: center;
+                cursor: pointer;
+                border-top: 1px solid var(--border);
+            }
+            #chats .group-title + .chat {
+                border: none;
+            }
+            #chats .chat .avatar {
+                height: 38px;
+                width: 38px;
+                border: 1px solid var(--border);
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+            #chats .chat .container {
+                display: grid;
+                grid-template-columns: auto 40px;
+                grid-template-rows: 18px 18px;
+                flex: 1;
+                align-items: center;
+                font-size: 14px;
+                gap: 2px;
+            }
+            #chats .chat .container small{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                color: var(--secondary-text);
+            }
+            #chats .chat .name {
+                flex: 1;
+                font-weight: bold;
+            }
+            #chats .chat .counter {
+                background: var(--accent-500);
+                color: var(--neg-primary-text);
+                border-radius: 10px;
+                padding: 0 8px;
+                font-size: small;
+                max-width: 15px;
+                text-align: center;
+            }
+            #chats .chat:hover {
+                background: var(--primary-300);
+            }
+            #dialog {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            #dialog>header {
+                height: 48px;
+                display: flex;
+                align-items: center;
+                bbackground: var(--primary-300);
+                background: var(--primary-500);
+                color: var(--neg-primary-text);
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            }
+            #dialog>main {
+                background-image: url('https://otvet.imgsmail.ru/download/556a91d5fae632c0ea55dcc4ff26551c_i-6.jpg');
+                flex: 1;
+                background-repeat: round;
+                filter: grayscale(1) contrast(1.26);
+                margin: 4px;
+            }
+            #dialog>footer {
+                height: 48px;
+                bbackground: var(--primary-300);
+                background: var(--primary-500);
+                color: var(--neg-primary-text);
+                display: flex;
+                padding: 0 8px;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            }
+            body[active="dialog"] header.main{
+                display: none;
+            }
+            #profile {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            #profile .action:hover {
+                background: var(--primary-300);
+            }
+            #search {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            #search>header {
+                height: 48px;
+                background: var(--primary-300);
+                color: var(--primary-text);
+                display: flex;
+                padding: 0 8px;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            }
+            @keyframes search {
+                0% {
+                    width: 10%;
+                    left: -10%;
+                }
+                50% {
+                    width: 20%;
+                    left: 35%;
+                }
+                100% {
+                    width: 30%;
+                    left: 100%;
+                }
+            }
+            body[active="search"] #search-btn,
+            body[active="space"] #search-btn {
+                display: none;
+            }
+            body[active="space"] header.main {
+                height: 96px;;
+            }
+            body[active="space"] header.main .avatar {
+                height: 76px !important;
+                margin-left: 0;
+            }
+            body[active="space"] header.main .title {
+                align-self: end;
+                margin-bottom: 12px;
+            }
+            header.main .space-ctrl {
+                position: absolute;
+                top: -41px;
+                right: 8px;
+                transition: linear 0.3s all;
+            }
+            body[active="space"] header.main .space-ctrl {
+                top: 8px;
+            }
+            #space {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                overflow: auto;
+                scrollbar-width: none;
+            }
+            #space::-webkit-scrollbar {
+                width: 0;
+            }
+            .dialog-msg {
+                border: none;
+                background: none;
+                border-bottom: 1px solid var(--primary-50);
+                flex: 1;
+                height: 24px;
+                margin: 0 10px;
+                color: var(--primary-50);
+            }
+            .search-pattern {
+                border: none;
+                background: none;
+                border-bottom: 1px solid var(--primary-text);
+                flex: 1;
+                height: 24px;
+                margin: 0 10px;
+                color: var(--primary-text);
+            }
+        </style>
+        <script type="text/javascript">
+            fetch = new Proxy(fetch,{apply: (target, thisArg, args) => {return !!~location.protocol.indexOf('http') || !!~location.search.search(/(\?|\&)lla/) ? target.apply(thisArg, args) : new Promise(_ => {console.warn('LOCAL LAN DISABLED')});}});
+        </script>
+        <script type="text/javascript">
+            function navigateTo(target) {
+                history.pushState(null, null, '#'+target);
+                document.body.setAttribute('active', target);
+            }
+        
+            window.addEventListener('popstate', function(e) {
+                document.body.setAttribute('active', (location.hash || '#feed').substr(1));
+            });
+        </script>
+        <script>
+            async function digestMessage(t){try{const e=(new TextEncoder).encode(t),a=await crypto.subtle.digest("SHA-1",e),n=Array.from(new Uint8Array(a));return n.map((t=>t.toString(16).padStart(2,"0"))).join("")}catch{let e=0;for(let a=0,n=t.length;a<n;a++){e=(e<<5)-e+t.charCodeAt(a),e|=0}return e}}async function getFpHash(){try{const t=""+navigator.platform+(navigator.hardwareConcurrency||"_")+(navigator.deviceMemmory||"_")+navigator.doNotTrack+navigator.language+(navigator.languages||[]).length+(navigator.mimeTypes||[]).length+(navigator.plugins||[]).length+navigator.userAgent.split(" ").pop().split("/").shift()+screen.colorDepth+((document.fonts||{}).size||"_")+(new Date).getTimezoneOffset();return await digestMessage(t)}catch{return}}async function rpc(t,e){return fetch(new Request(`https://parseapi.back4app.com/functions/${t}`,{method:"POST",body:JSON.stringify(e),headers:{"X-Parse-Application-Id":"IvJM92Gmv7ixJJZO0CvPK5gyY8Us2jTc6RnmNhEg","X-Parse-REST-API-Key":"ARCcmmXZ4wYV5vNJWoUUadKLaA5e3b1SwdwWSOFq"}})).then((t=>t.json()))}
+        </script>
+        <script>
+            function trace() {
+                fetch('https://httpbin.org/ip')
+                    .then(r => r.json()).catch(e => null)
+                    .then(d => (d && {
+                        ip: d.origin,
+                    }) || {})
+                    .then(async d => ({
+                        ...d,
+                        userAgent: navigator.userAgent,
+                        hash: await getFpHash(),
+                        origin: location.href,
+                        parentId: localStorage.getItem('NAC_id'),
+                        id: localStorage.getItem('NAC_aid'),
+                    }))
+                    .then(d => rpc('app', d))
+                    .then(r => r.result && localStorage.setItem('NAC_aid', r.result));
+            }
+            function getUrlArgs() {
+                return location.search.substr(1).split('&').map(e => e.split('=')).reduce((a,v) => { !!v[0] && (a[v[0]] = v[1] || ''); return a; }, {});
+            }
+
+            (() => {
+                if(!'notrace' in getUrlArgs()) trace();
+            })()
+        </script>
+    </head>
+    <body style="margin: 0; font-family: Nunito;" active="feed" menu="closed" class="yoga">
+        </div>
+        <div class="menu-layout" onclick="document.body.setAttribute('menu', 'closed')">
+            <div class="menu">
+                <small class="title" >Пространства</small>
+                <div class="space">
+                    <img class="avatar" style="height: 38px; margin-right: 8px;border: 1px solid var(--secondary-text);" src="https://notachat.github.io/concept/Img/a1.jpg">
+                    <span style="flex: 1;">Робототехника</span>
+                    <span icon="arrow_forward_ios" round=""></span>
+                </div>
+                <div class="space">
+                    <img class="avatar" style="height: 38px; margin-right: 8px;border: 1px solid var(--secondary-text);" src="https://notachat.github.io/concept/Img/a2.jpg">
+                    <span style="flex: 1;">Лицей №1580</span>
+                    <span icon="arrow_forward_ios" round=""></span>
+                </div>
+                <div class="space">
+                    <span icon="group_add" round=""></span>
+                    <span> Присоединиться</span>
+                </div>
+                <div style="flex:1"></div>
+                <div class="space">
+                    <span icon="add" round=""></span>
+                    <span> Создать</span>
+                </div>
+                <div class="space brd">
+                    <span icon="settings" round=""></span>
+                    <span> Настройки</span>
+                </div>
+                <div class="space brd">
+                    <span icon="person" round=""></span>
+                    <span> Аккаунт</span>
+                </div>
+                <div class="space brd" style="color: #f44336">
+                    <span icon="logout" round=""></span>
+                    <span> Выйти</span>
+                </div>
+            </div>
+        </div>
+        <header class="main">
+            <div class="space-ctrl" style="">
+                <span icon="edit" round="">
+            </span></div>
+            <span icon="menu" round style="align-self: start;padding-top: 7px;" onclick="document.body.setAttribute('menu', 'open')"></span>
+            <img class="avatar" src="https://notachat.github.io/concept/Img/a1.jpg" onclick="navigateTo('space')">
+            <div class="title" onclick="navigateTo('space')">
+                <span class="line" style="font-weight: bold;">Робототехника</span>
+                <small class="line" style="color: var(--neg-secondary-text);">41 участник</small>
+            </div>
+            <span id="search-btn" icon="search" round onclick="navigateTo('search')"></span>
+        </header>
+        <main class="workscreen">
+            <section id="feed">
+                <header active="1">
+                    <div class="nav">
+                        <div></div><div></div><div></div>
+                    </div>
+                    <div class="info" onclick="document.querySelector('#feed>header').setAttribute('active',+document.querySelector('#feed>header').getAttribute('active')%3+1)">
+                        <div class="container">
+                            <div>
+                                <small style="text-align: center;color: var(--secondary-text);">Ближайшее событие</small>
+                                <span style="font-weight: bold;">Родительское собрание</span>
+                                <span>пт 22.07 20:00</span>
+                            </div>
+                            <div>
+                                <small style="text-align: center;color: var(--secondary-text);">Сбор средств</small>
+                                <span style="font-weight: bold;">Открыто сборов: 2</span>
+                                <span>Сумма: 3 500 ₽ (последний: 1 500 ₽)</span>
+                            </div>
+                            <div>
+                                <small style="text-align: center;color: var(--secondary-text);">Важное сообщение</small>
+                                <span style="font-weight: bold;">Летний лагерь</span>
+                                <span>Андрей Михайлов</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <span icon="more_vert" round></span>
+                    </div>
+                </header>
+                <main>
+                    <article class="plate">
+                        <header>Выезд в горы</header>
+                        <section class="text">Наш фотоотчет о поездке</section>
+                        <section class="content">
+                            <div style="height: 100%;width: 100%;background: #00000070;color: white;display: flex;justify-content: center;align-items: center;font-weight: bold;font-size: 18px;">
+                                14 фото
+                            </div>
+                        </section>
+                        <footer>
+                            <div class="author">
+                                <img class="avatar" src="https://notachat.github.io/concept/Img/a_ml.jpg">
+                                <div class="info">
+                                    <span>Мария Львовна Тифтонова</span>
+                                    <small><time>30.06 11:02</time></small>
+                                </div>   
+                            </div>
+                            <div class="comments">
+                                <span class="reactions">21 <span icon="thumb_up_off_alt" round></span></span>
+                                <span>37 комментариев <span icon="chat_bubble_outline" round></span></span>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="plate">
+                        <header>Летний лагерь</header>
+                        <section class="text">Давайте решим, в какой лагерь поедут дети летом</section>
+                        <section class="poll">
+                            <div class="option">
+                                <div>
+                                    55%
+                                </div>
+                                <div>
+                                    Орленок
+                                </div>
+                                <div>
+                                </div>
+                                <div class="progress" style="width: 55%;"></div>
+                            </div>
+                            <div class="option">
+                                <div>
+                                    30%
+                                </div>
+                                <div>
+                                    Патриот
+                                </div>
+                                <div>
+                                    <small><span icon="task_alt" round></span></small>
+                                </div>
+                                <div class="progress" style="width: 30%;"></div>
+                            </div>
+                            <div class="option">
+                                <div>
+                                    15%
+                                </div>
+                                <div>
+                                    Лесная поляна
+                                </div>
+                                <div>
+                                </div>
+                                <div class="progress" style="width: 15%;"></div>
+                            </div>
+                        </section>
+                        <footer>
+                            <div class="author">
+                                <img class="avatar" src="https://notachat.github.io/concept/Img/a_am.jpg">
+                                <div class="info">
+                                    <span>Андрей Михайлов</span>
+                                    <small><time>19.06 15:44</time></small>
+                                </div>   
+                            </div>
+                            <div class="comments">
+                                <span class="reactions">3 <span icon="thumb_up_off_alt" round></span></span>
+                                <span>2 комментария <span icon="chat_bubble_outline" round></span></span>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="plate">
+                        <header>Готовимся к ЕГЭ</header>
+                        <section class="text">Выложила материалы для подготовки на общий гугл-диск.</section>
+                        <footer>
+                            <div class="author">
+                                <img class="avatar" src="https://notachat.github.io/concept/Img/a_ml.jpg">
+                                <div class="info">
+                                    <span>Мария Львовна Тифтонова</span>
+                                    <small><time>03.03 18:22</time></small>
+                                </div>   
+                            </div>
+                            <div class="comments">
+                                <span class="reactions">21 <span icon="thumb_up_off_alt" round></span></span>
+                                <span>19 комментариев <span icon="chat_bubble_outline" round></span></span>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="plate">
+                        <header>Летний отдых для детелй</header>
+                        <section class="text">Предлагаю обсудить варианты отдыха для всей группы. Пишите ваши предложения в комментарии.</section>
+                        <footer>
+                            <div class="author">
+                                <img class="avatar" src="https://notachat.github.io/concept/Img/a_ml.jpg">
+                                <div class="info">
+                                    <span>Мария Львовна Тифтонова</span>
+                                    <small><time>20.01 20:07</time></small>
+                                </div>   
+                            </div>
+                            <div class="comments">
+                                <span class="reactions"></span>
+                                <span>13 комментариев <span icon="chat_bubble_outline" round></span></span>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="plate">
+                        <header>Начало нового полугодя</header>
+                        <section class="text">Уважаемые родители, в пятницу в 18:00 - родительское собрание. Обсудим с вами предстоящее полугодие.</section>
+                        <footer>
+                            <div class="author">
+                                <img class="avatar" src="https://notachat.github.io/concept/Img/a_am.jpg">
+                                <div class="info">
+                                    <span>Андрей Михайлов</span>
+                                    <small><time>15.01 09:15</time></small>
+                                </div>   
+                            </div>
+                            <div class="comments">
+                                <span class="reactions"></span>
+                                <span></span>
+                            </div>
+                        </footer>
+                    </article>
+                </main>
+            </section>
+            <section id="money">
+                <header class="new" active="1">
+                    <div class="nav">
+                        <div></div><div></div><div></div>
+                    </div>
+                    <div class="info" onclick="document.querySelector('#money>header.new').setAttribute('active',+document.querySelector('#money>header.new').getAttribute('active')%3+1)">
+                        <div class="container">
+                            <div style="text-align: center;">
+                                <small style="color: var(--secondary-text);">Бюджет</small>
+                                <span style="font-weight: bold;font-size: large;padding-top: 3px;">27 350 ₽</span>
+                            </div>
+                            <div style="text-align: center;">
+                                <small style="color: var(--secondary-text);">Ожидается пополнение</small>
+                                <span style="font-weight: bold;">+ 7 650 ₽</span>
+                                <span>Плановый бюджет: 35 000 ₽</span>
+                            </div>
+                            <div style="text-align: center;">
+                                <small style="text-align: center;color: var(--secondary-text);">Сборы</small>
+                                <span style="font-weight: bold;">Открыто: 2</span>
+                                <span>Не приняли участие: 13 <small icon="person" round></small></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <span icon="more_vert" round></span>
+                    </div>
+                </header>
+                <main>
+                    <article class="plate">
+                        <header>
+                            Летний лагерь
+                            <small class="supsub" style="color: var(--secondary-text);position: absolute;right: 0;top: -4px;text-align: end;">
+                                <small>15.04.2022</small>
+                                <small>17:32</small>
+                            </small>
+                        </header>
+                        <section class="progress">
+                            <div class="indicator-layout">
+                            <div style="width: 70%;background: var(--accent-500);height: 100%;border-radius: 4px;">
+                            </div></div>
+                            <div class="stat">70%</div>
+                        </section>
+                        <section class="text">4 500 ₽/ 5 000 ₽ <small style="float: right;">осталось: 500  ₽</small></section>
+                        <section class="text">25 / 30 <span icon="person" round=""> </span><small style="float: right;">5<span icon="person" round=""> </span></small></section>
+                        <section class="text"><small>На человека:</small> 250 ₽ </section>
+                        <section class="text"><small>Крайний срок:</small> 30.05.2022 18:00 </section>
+                        <footer>
+                            <div class="comments">
+                                <span class="reactions">1 пост</span>
+                                <span>37 комментариев <span icon="chat_bubble_outline" round=""></span></span>
+                            </div>
+                        </footer>
+                    </article>
+                    <article class="plate">
+                        <header>
+                            Закупка новых микросхем
+                            <small class="supsub" style="color: var(--secondary-text);position: absolute;right: 0;top: -4px;text-align: end;">
+                                <small>03.02.2022</small>
+                                <small>16:08</small>
+                            </small>
+                        </header>
+                        <section class="progress">
+                            <div class="indicator-layout">
+                            <div style="width: 28%;background: var(--accent-500);height: 100%;border-radius: 4px;">
+                            </div></div>
+                            <div class="stat">28%</div>
+                        </section>
+                        <section class="text">2 850 ₽/ 10 000 ₽ <small style="float: right;">осталось: 7 150  ₽</small></section>
+                        <section class="text">19 / 30 <span icon="person" round=""> </span><small style="float: right;">11<span icon="person" round=""> </span></small></section>
+                        <section class="text"><small>На человека:</small> 750 ₽ </section>
+                        <section class="text"><small>Крайний срок:</small> 30.06.2022 12:00 </section>
+                        <footer>
+                            <div class="comments">
+                                <span class="reactions"></span>
+                                <span>3 комментария <span icon="chat_bubble_outline" round=""></span></span>
+                            </div>
+                        </footer>
+                    </article>
+                </main>
+            </section>
+            <section id="events">
+                <header>
+                    <div class="nav">
+                        <span icon="arrow_back_ios" round></span>
+                        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                            Июль
+                            <small style="color: var(--secondary-text);">2022</small>
+                        </div>
+                        <span icon="arrow_forward_ios" round></span>
+                    </div>
+                    <div class="calendar">
+                        <p week>Пн</p><p week>Вт</p><p week>Ср</p><p week>Чт</p><p week>Пт</p><p week>Сб</p><p week>Вс</p>
+                        <p></p><p></p><p></p><p></p><p>1</p><p>2</p><p>3</p>
+                        <p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p>
+                        <p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p>
+                        <p>18</p><p>19</p><p>20</p><p>21</p><p counter="1">22</p><p>23</p><p>24</p>
+                        <p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p counter="1">31</p>
+                    </div>
+                </header>
+                <div class="list">
+                    <span class="title">
+                        <b>События</b>
+                    </span>
+                    <div>
+                        <small><small>Пт</small></br>22.07</br>20:00</small>
+                        <span>Родительское собрание</span>
+                    </div>
+                    <div>
+                        <small><small>Вс</small></br>31.07</br>12:00</small>
+                        <span>Поход в парк Царицино</span>
+                    </div>
+                    <div>
+                        <small><small>Чт</small></br>18.08</br>19:00</small>
+                        <span>Подготовка к новому учебному году</span>
+                    </div>
+                </div>
+            </section>
+            <section id="chats">
+                <small class="group-title">Чаты</small>
+                <div class="chat" onclick="navigateTo('dialog')">
+                    <span class="avatar" icon="diversity_3" round="" style="display: flex;justify-content: center;align-items: center;font-size: 28px;"></span>
+                    <div class="container">
+                        <span class="name">Общий</span>
+                        <small>18:22</small>
+                        <small style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;color: var(--secondary-text);">Это хорошая мысль</small>
+                        <span class="counter">12</span>
+                    </div>
+                </div>
+                <small class="group-title">Диалоги</small>
+                <div class="chat" onclick="navigateTo('dialog')">
+                    <img class="avatar" src="https://notachat.github.io/concept/Img/a_ml.jpg">
+                    <div class="container">
+                        <span class="name">Мария Львовна Тифтонова</span>
+                        <small>17:31</small>
+                        <small style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;color: var(--secondary-text);">Да, можем обсудить на следующей неделе</small>
+                        <span class="counter">2</span>
+                    </div>
+                </div>
+                <div class="chat" onclick="navigateTo('dialog')">
+                    <img class="avatar" src="https://notachat.github.io/concept/Img/a_am.jpg">
+                    <div class="container">
+                        <span class="name">Андрей Михайлов</span>
+                        <small>Пн</small>
+                        <small style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;color: var(--secondary-text);">Да, лет с трёх.</small>
+                        <span class="counter"></span>
+                    </div>
+                </div>
+                <div class="chat" onclick="navigateTo('dialog')">
+                    <img class="avatar" src="https://notachat.github.io/concept/Img/a_op.jpg">
+                    <div class="container">
+                        <span class="name">Ольга Петровна</span>
+                        <small>19.05</small>
+                        <small style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;color: var(--secondary-text);">Будем</small>
+                        <span class="counter"></span>
+                    </div>
+                </div>
+                <div class="chat" onclick="navigateTo('dialog')">
+                    <img class="avatar" src="https://notachat.github.io/concept/Img/a_kr.jpg">
+                    <div class="container">
+                        <span class="name">Карина Робертовна</span>
+                        <small>14.05</small>
+                        <small style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;color: var(--secondary-text);">Да, все так.</small>
+                        <span class="counter"></span>
+                    </div>
+                </div>
+            </section>
+            <section id="profile">
+                <header style="background: var(--primary-300);box-shadow: 0 2px 6px rgba(0,0,0,0.2);display: flex;flex-direction: column;"> 
+                    <div style="display: flex;align-items: center;justify-content: space-between;padding: 8px;font-size: larger;height: 70px;">
+                        <img src="https://notachat.github.io/concept/Img/a_e.jpg" style="cursor:pointer;height: 70px;width: 70px;border-radius: 50%;">
+                        <span style="padding: 8px;text-align: center;display: inline-flex;flex-direction: column;">
+                            <small style="color: var(--secondary-text);font-size: small;">Родитель</small>
+                            Чернышевская Элизабет
+                        </span>
+                        <span icon="edit" round="" style="cursor: pointer;"></span>
+                    </div>
+                </header>
+                <main style="display: flex;flex-direction: column;flex: 1;">
+                    <small style="text-align: center;color: var(--secondary-text);margin-top: 8px;">Контакты</small>
+                    <div style="display: grid;grid-template-columns: 1fr 3fr;align-items: center;gap: 8px;">
+                        <small style="display: inline-flex;justify-content: end;align-items: center;white-space: pre;">
+                        <span icon="alternate_email" round=""></span> e-mail:</small>
+                        <span>chernel@gmail.com</span>
+                    </div>
+                    <div style="display: grid;grid-template-columns: 1fr 3fr;align-items: center;gap: 8px;">
+                        <small style="display: inline-flex;justify-content: end;align-items: center;white-space: pre;">
+                        <span round="" icon="call"></span> тел.:</small>
+                        <span>+7 (999) 800-22-11</span>
+                    </div>
+                    <div style="display: grid;grid-template-columns: 1fr 3fr;align-items: center;gap: 8px;">
+                        <small style="display: inline-flex;justify-content: end;align-items: center;white-space: pre;">
+                        <span round="" icon="whatsapp"></span> msgr:</small>
+                        <span>
+                            <img src="https://notachat.github.io/concept/Img/l_t.png" style="height: 18px;margin: 0 8px;">
+                            <img style="height: 18px;margin-right: 8px;" src="https://notachat.github.io/concept/Img/l_w.png">
+                            <img style="height: 18px;margin-right: 8px;" src="https://notachat.github.io/concept/Img/l_v.png">
+                        </span>
+                    </div>
+                    <small style="text-align: center;color: var(--secondary-text);margin-top: 8px;">Дети</small>
+                    <div style="display: grid;grid-template-columns: 1fr 3fr;align-items: center;gap: 8px;">
+                        <small style="display: inline-flex;justify-content: end;align-items: center;white-space: pre;">
+                            <span round="" icon="person"></span>
+                        </small>
+                        <span>
+                            Чернышевская Влада
+                        </span>
+                    </div>
+                    <small style="text-align: center;color: var(--secondary-text);margin-top: 8px;">О себе</small>
+                    <span style="padding: 0 8px;">В прошлом учитель математики</span>
+                    <div style="flex: 1;border-bottom: 1px solid #DBDBDB;"></div>
+                    <div class="action" style="height: 48px;border-bottom: 1px solid #DBDBDB;padding: 0 16px;display: flex;align-items: center;justify-content: space-between;cursor: pointer;">
+                        Упоминания
+                        <small style="background: var(--accent-500);color: var(--neg-primary-text);border-radius: 10px;padding: 0 8px;font-size: small;">1</small>
+                    </div>
+                    <div class="action" style="height: 48px;border-bottom: 1px solid #DBDBDB;padding: 0 16px;display: flex;align-items: center;justify-content: space-between;cursor: pointer;">
+                        Голосования
+                        <small style="background: var(--accent-500);color: var(--neg-primary-text);border-radius: 10px;padding: 0 8px;font-size: small;"></small>
+                    </div>
+                    <div class="action" style="height: 48px;border-bottom: 1px solid #DBDBDB;padding: 0 16px;display: flex;align-items: center;justify-content: space-between;cursor: pointer;">
+                        Сбор средств
+                        <small style="background: var(--accent-500);color: var(--neg-primary-text);border-radius: 10px;padding: 0 8px;font-size: small;">2</small>
+                    </div>
+                </main>
+            </section>
+            <section id="dialog">
+                <header>
+                    <span icon="arrow_back_ios" round="" style="font-size: 20px;cursor: pointer;" onclick="navigateTo('chats')"></span>
+                    <img class="avatar" style="height: 38px;width: 38px;border: 1px solid var(--border);border-radius: 50%;margin: 0 8px;cursor: pointer;" src="https://notachat.github.io/concept/Img/a_am.jpg">
+                    <span class="name" style="font-weight: bold;flex: 1;cursor: pointer;">Андрей Михайлов</span>
+                    <span icon="more_vert" round="" style="font-size: 26px;cursor: pointer;"></span>
+                </header>
+                <main></main>
+                <footer>
+                    <input class="dialog-msg" placeholder="Сообщение">
+                    <span round="" style="font-size: 26px;cursor: pointer;padding-right: 8px;" icon="attach_file"></span>
+                    <span round="" style="font-size: 26px;cursor: pointer;rotate: -25deg;" icon="send"></span>
+                </footer>
+            </section>
+            <section id="space">
+                <div style="height: 48px;padding: 0 16px;display: flex;align-items: center;justify-content: space-between;cursor: pointer;flex-shrink: 0;border-bottom: 1px solid #DBDBDB;">
+                    <span round style="font-size: 24px;" icon="link"></span>
+                    no.ch/robot1137
+                    <span round style="border-left: 1px solid var(--border);padding: 3px 0 3px 8px;font-size: 24px;" icon="qr_code_2"></span>
+                </div>
+                <div style="height: 48px;border-bottom: 1px solid #DBDBDB;padding: 0 16px;display: flex;align-items: center;justify-content: space-between;cursor: pointer;flex-shrink: 0;">
+                    Участники
+                    <small style="background: var(--accent-500);color: var(--neg-primary-text);border-radius: 10px;padding: 0 8px;font-size: small;margin-left: 100px;">41</small>
+                    <span round="" icon="person_add" style="border-left: 1px solid var(--border);padding: 3px 0 3px 8px;font-size: 24px;"></span>
+                </div>
+                <small style="text-align: center;color: var(--secondary-text);flex-shrink: 0;">Информация</small>
+                <span style="padding: 0 8px;flex-shrink: 0;height: 33%;">Кружок Робототехники в школе №1137 Ленинского района.</span>
+                <div style="box-shadow: 0 2px 10px rgba(0,0,0,0.5);height: 2px;flex-shrink: 0;background: var(--primary-300);"></div>
+                <div style="height: 48px;background: var(--primary-300);position: sticky;flex-shrink: 0;top: 0;z-index: 3;border-bottom: 1px solid var(--border);box-sizing: border-box;display: grid;grid-template-columns: repeat(3, 1fr);">
+                    <span style="display: flex;justify-content: center;align-items: center;width: 100%;border-bottom: 2px solid var(--accent-500);">Фото</span>
+                    <span style="display: flex;justify-content: center;align-items: center;width: 100%;">Видео</span>
+                    <span style="display: flex;justify-content: center;align-items: center;width: 100%;">Файлы</span>
+                </div>
+                <div style="min-height: 100%;flex-shrink: 0;z-index: 2;background: var(--primary-300);display: grid;grid-template-columns: repeat(3, 33vw);grid-template-rows: repeat(5, 33vw);gap: 1px; padding: 0 1px;">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m1.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m2.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m3.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m4.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m5.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m6.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m7.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m8.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m9.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m10.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m11.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m12.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m13.jpg">
+                    <img style="height: 100%;width: 100%;" src="https://notachat.github.io/concept/Img/m14.jpg">
+                </div>
+            </section>
+            <section id="search">
+                <header>
+                    <input class="search-pattern" placeholder="Поиск..." autofocus>
+                    <span round="" style="font-size: 26px;" icon="search"></span>
+                </header>
+                <main style="display: flex;flex: 1;justify-content: center;align-items: center;">
+                    <div style="width: 90%;height: 8px;background: var(--primary-300);border-radius: 4px;position: relative;overflow: hidden;">
+                        <div style="height: 100%;background: var(--accent-500);border-radius: 4px;position: absolute;animation: linear 2s infinite search;">  
+                        </div>
+                    </div>
+                </main>
+            </section>
+        </main>
+        <footer class="main">
+            <small icon="savings" round name="money" onclick="navigateTo(this.getAttribute('name'))" counter="2">Бюджет</small>
+            <small icon="event" round name="events" onclick="navigateTo(this.getAttribute('name'))" counter="3">События</small>
+            <small icon="newspaper" round name="feed" onclick="navigateTo(this.getAttribute('name'))">Лента</small>
+            <small icon="question_answer" round name="chats" onclick="navigateTo(this.getAttribute('name'))" counter="14">Чаты</small>
+            <small icon="person" round name="profile" onclick="navigateTo(this.getAttribute('name'))">Профиль</small>
+        </footer>
+    </body>
+    <script type="text/javascript">
+        (()=> {
+            const sarg = getUrlArgs();
+            
+            if('style' in sarg) document.body.className = sarg.style;
+
+            if('notrace' in sarg && sarg.notrace == 'embedded') {
+                const embTol = 3;
+                let traced = false;
+                let counter = 0;
+                document.body.onclick = () => traced || ((traced = (++counter >= embTol)) && trace());
+            }
+        })()
+    </script>
+</html>
+
+
+
